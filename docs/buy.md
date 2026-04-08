@@ -1,8 +1,8 @@
 # Buy on Mac App Store
 
-**<<APPLICATION_FULL_NAME>>** is a one-time payment of **<<COST>>** on the **Mac App Store**.
+**SpliceKit** is a one-time payment of **$0** on the **Mac App Store**.
 
-> [:icon-desktop-download: Click here to **buy** on the **Mac App Store**](<<APPSTORE_URL>>)
+> [:icon-desktop-download: Click here to **buy** on the **Mac App Store**](NA)
 
 There is no free trial.
 
@@ -34,7 +34,7 @@ All of the 2024 and 2025 **Apple Worldwide Developer Conference (WWDC)** videos 
 
 After **9 years of free updates**, to ensure that CommandPost continues to be developed, improved, and stay open-source, we've decided that you need at least ONE paid LateNite application installed to use CommandPost moving forward - consider it "inner circle" software (i.e. only our mates get access to it).
 
-You can use **<<APPLICATION_FULL_NAME>>** to "unlock" CommandPost!
+You can use **SpliceKit** to "unlock" CommandPost!
 
 ![](/static/commandpost.png)
 

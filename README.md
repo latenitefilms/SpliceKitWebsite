@@ -1,3 +1,3 @@
-# <<APPLICATION_FULL_NAME>>
+# SpliceKit
 
 Application description coming soon!

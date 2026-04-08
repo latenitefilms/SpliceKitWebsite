@@ -1,8 +1,8 @@
 # Support
 
-If you run into any bugs, crashes, or you have a feature request, you can post an issue [here](https://github.com/latenitefilms/<<GITHUB_PROJECT_NAME>>/issues).
+If you run into any bugs, crashes, or you have a feature request, you can post an issue [here](https://github.com/latenitefilms/SpliceKitWebsite/issues).
 
-If you have any general questions or feedback, you can discuss [here](https://github.com/latenitefilms/<<GITHUB_PROJECT_NAME>>/discussions).
+If you have any general questions or feedback, you can discuss [here](https://github.com/latenitefilms/SpliceKitWebsite/discussions).
 
 GitHub registration is free, and this GitHub repository is actively monitored by [LateNite](https://github.com/latenitefilms).
 
