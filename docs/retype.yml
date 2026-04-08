@@ -1,28 +1,27 @@
 input: .
 output: .retype
 
-url: SpliceKitWebsite.fcp.cafe
+url: splicekit.fcp.cafe
 
 favicon: static/favicon.ico
 
 branding:
   title: SpliceKit
-  logo: static/logo-dark.png
-  logoDark: static/logo-light.png
+  logo: static/splicekit.png
 
 links:
 
-- text: Buy on Mac App Store
-  link: /buy/
+- text: Download
+  link: /download/
   icon: desktop-download
 
 - text: Issues
-  link: https://github.com/latenitefilms/SpliceKitWebsite/issues
+  link: https://github.com/elliotttate/SpliceKit/issues
   icon: issue-opened
   target: blank
 
 - text: Discussions
-  link: https://github.com/latenitefilms/SpliceKitWebsite/discussions
+  link: https://github.com/elliotttate/SpliceKit/discussions
   icon: comment-discussion
   target: blank
 
