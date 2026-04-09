@@ -1,17 +1,58 @@
 # Release Notes
 
+### 3.1.4
+
+**🎉 Released:**
+- 8 Apr 2026
+
+**🔨 Improvements**
+- Improves social caption insertion and relaunch restore. Fixes title placeholder recovery on restart, preserves caption placement on reload, and tightens word highlighting behavior.
+
+---
+
 ### 3.1.3
 
 **🎉 Released:**
 - 8 Apr 2026
 
-**What's New:**
-- Added Apple Intelligence+ agentic mode in the Command Palette with timeline-aware tools and natural-language editing.
-- Added an embedded Lua 5.4 scripting engine with REPL, menu scripts, example scripts, and MCP tools.
-- Improved social captions with Basic Title support, karaoke highlighting, auto-transcription, and better lower-third behavior.
-- Added default spatial conform controls for new timeline clips.
-- Fixed Lua RPC deadlocks, caption engine selection, Parakeet build compatibility, and long-clip caption blocking.
+**Apple Intelligence+ (Agentic Mode):**
+- New **Apple Intelligence+** engine in the Command Palette — an agentic AI mode powered by Apple's on-device FoundationModels framework with tool-calling capabilities
+- Apple Intelligence+ can read your timeline, seek to specific times, blade/cut clips, add markers, apply effects, execute menu commands, and repeat actions at intervals — all from a natural language prompt
+- 6 built-in tools: **edit** (timeline actions), **seek** (playhead positioning), **clips** (read timeline state), **repeat_action** (batch operations like "blade every 5 seconds"), **effect** (apply effects), **menu** (execute any Final Cut Pro menu command)
+- Timeline-aware context: Apple Intelligence+ automatically knows your project name, duration, clip count, frame rate, and playhead position
+- Smart pattern detection: phrases like "cut every 3 seconds" or "add markers every 10 seconds" are intercepted for fast direct execution
+- Three AI engines selectable from the Command Palette dropdown: **Apple Intelligence** (basic), **Gemma 4** (local MLX), and **Apple Intelligence+** (agentic with tools) — Apple Intelligence+ is now the default
+- Engine preference persists across sessions via `NSUserDefaults`
 
+**Lua Scripting Engine:**
+- Embedded Lua 5.4 VM running directly in FCP's process (zero latency)
+- `sk` module with 25+ actions: `sk.blade()`, `sk.seek()`, `sk.clips()`, `sk.rpc()`, `sk.eval()`
+- REPL panel (`CONTROL+OPTION+L`) for interactive scripting
+- Live coding: save `.lua` files to `~/Library/Application Support/SpliceKit/lua/auto/`
+- 8 built-in menu scripts (timeline report, remove silences, blade every 5s, balance color, cross dissolves, generate captions, export XML, screenshot viewer)
+- 25+ example scripts (podcast producer, music video editor, conform tool, batch export, and more)
+- MCP tools: `lua_execute`, `lua_execute_file`, `lua_reset`, `lua_watch`, `lua_state`
+
+**Social Captions (Improved):**
+- Uses Final Cut Pro's built-in Basic Title — works on all Final Cut Pro installations, no custom templates needed
+- Word-by-word karaoke highlighting via per-word `<text-style>` colouring
+- Auto-transcribe: generates captions without manual transcription step
+- Drop shadow on all caption text for readability
+- Lower-third positioning via Motion channel hierarchy
+- Screen freeze hides temp project switch (seamless UX)
+- `reloadMicaDocument` fix: no more greyed-out text or Inspector crashes
+
+**Default Spatial Conform Type (PR #22):**
+- Override default spatial conform (Fit/Fill/None) for new timeline clips
+- Menu: `Enhancements > Options > Default Spatial Conform`
+- Options panel dropdown + Command Palette cycling
+- Bridge API: `set_bridge_option_value("defaultSpatialConformType", "fill")`
+
+**Bug Fixes:**
+- Fix Lua RPC main thread deadlock: `sk.rpc()` no longer forces every call through main thread, preventing soft deadlocks during polling loops
+- Fix caption engine override: caption generation now uses the user's configured transcription engine instead of forcing FCP Native
+- Fix parakeet-transcriber build for updated FluidAudio API (`AsrManager.initialize` → `loadModels`, new model version enum variants)
+- Caption script is now non-blocking for long clips with transcript reuse
 ---
 
 ### 3.1.2
