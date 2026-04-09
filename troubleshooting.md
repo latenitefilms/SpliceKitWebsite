@@ -6,4 +6,16 @@ Please read this page first, and if the solutions here don't solve your problem,
 
 ---
 
-Coming soon!
+## Malware Block and Moved to Trash
+
+We've had a couple of users report seeing this error:
+
+![](/static/malware-warning.png)
+
+SpliceKit isn't Malware - you can look at all the [source code](https://github.com/elliotttate/SpliceKit) to confirm.
+
+To resolve this warning right-click on SpliceKit and select **Get Info**, then untick **Override Malware Protection**:
+
+![](/static/override-malware.png)
+
+SpliceKit should now launch correctly.
