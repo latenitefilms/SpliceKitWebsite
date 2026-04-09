@@ -1,9 +1,19 @@
 # Release Notes
 
+### 3.1.5
+
+**🎉 Released:**
+- 10th April 2026
+
+**🔨 Improvements**
+- Improves patcher update detection and rebuild/update flows, fixes bundled Parakeet packaging for updates, and reduces patched-app signing friction by removing unnecessary debug entitlements.
+
+---
+
 ### 3.1.4
 
 **🎉 Released:**
-- 8 Apr 2026
+- 8 April 2026
 
 **🔨 Improvements**
 - Improves social caption insertion and relaunch restore. Fixes title placeholder recovery on restart, preserves caption placement on reload, and tightens word highlighting behavior.
@@ -13,7 +23,7 @@
 ### 3.1.3
 
 **🎉 Released:**
-- 8 Apr 2026
+- 8 April 2026
 
 **Apple Intelligence+ (Agentic Mode):**
 - New **Apple Intelligence+** engine in the Command Palette — an agentic AI mode powered by Apple's on-device FoundationModels framework with tool-calling capabilities
@@ -48,7 +58,7 @@
 - Options panel dropdown + Command Palette cycling
 - Bridge API: `set_bridge_option_value("defaultSpatialConformType", "fill")`
 
-**Bug Fixes:**
+**🐞 Bug Fixes:**
 - Fix Lua RPC main thread deadlock: `sk.rpc()` no longer forces every call through main thread, preventing soft deadlocks during polling loops
 - Fix caption engine override: caption generation now uses the user's configured transcription engine instead of forcing FCP Native
 - Fix parakeet-transcriber build for updated FluidAudio API (`AsrManager.initialize` → `loadModels`, new model version enum variants)
@@ -58,9 +68,9 @@
 ### 3.1.2
 
 **🎉 Released:**
-- 7 Apr 2026
+- 7 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added local App Store receipt validation for Creator Studio subscriptions before launch.
 - Shows an alert when no valid subscription is found.
 
@@ -69,9 +79,9 @@
 ### 3.1.1
 
 **🎉 Released:**
-- 7 Apr 2026
+- 7 April 2026
 
-**What's New:**
+**🐞 Bug Fixes:**
 - Added support fixes for Final Cut Pro Creator Studio.
 - Fixed subscription validation and a CloudKit crash on ad-hoc signed builds.
 
@@ -80,9 +90,9 @@
 ### 3.1.0
 
 **🎉 Released:**
-- 6 Apr 2026
+- 6 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added configurable J/L playback speed ladders instead of Final Cut Pro’s fixed shuttle progression.
 - Added menu and API controls for custom playback ladders.
 - Added MCP playback speed controls and current-rate reporting.
@@ -93,11 +103,13 @@
 ### 3.0.2
 
 **🎉 Released:**
-- 6 Apr 2026
+- 6 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Improved Final Cut Pro discovery so SpliceKit can find non-standard app locations automatically.
 - Added a manual “Browse for Final Cut Pro...” fallback.
+
+**🐞 Bug Fixes:**
 - Fixed a launch crash caused by a missing log panel class in the dylib build.
 - Fixed incorrect version display when Final Cut Pro is installed outside the default path.
 
@@ -106,22 +118,24 @@
 ### 3.0.1
 
 **🎉 Released:**
-- 5 Apr 2026
+- 5 April 2026
 
-**What's New:**
-- Fixed Sparkle showing false update prompts on the latest version.
+**🔨 Improvements**
 - Bundled the pre-built `parakeet-transcriber` in the DMG for easier setup.
 - Improved Parakeet error messages and skipped clips shorter than 0.5s.
 - Deployed helper tools into the SpliceKit tools folder during deployment and added more detailed logging.
+
+**🐞 Bug Fixes:**
+- Fixed Sparkle showing false update prompts on the latest version.
 
 ---
 
 ### 3.0.0
 
 **🎉 Released:**
-- 5 Apr 2026
+- 5 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Rebranded FCPBridge as **SpliceKit**.
 - Introduced a new wizard-style patcher app, DMG distribution, and app icon.
 - Renamed the Final Cut Pro menu item to **Enhancements**.
@@ -133,22 +147,24 @@
 ### 2.8.4
 
 **🎉 Released:**
-- 4 Apr 2026
+- 4 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added effect browser favorites support through Final Cut Pro’s built-in favorites API.
 - Exposed Final Cut Pro internal debug and diagnostics tools through MCP presets.
 - Fixed patcher signing to preserve Apple framework signatures.
 - Added crash prevention for unsafe trim selectors and fixed the `retimeHold` action mapping.
+
+**🐞 Bug Fixes:**
 
 ---
 
 ### 2.8.3
 
 **🎉 Released:**
-- 2 Apr 2026
+- 2 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added effect dragging to empty timeline space to create named adjustment clips.
 - Included a toggle for this behavior in the FCPBridge menu.
 
@@ -157,9 +173,9 @@
 ### 2.8.2
 
 **🎉 Released:**
-- 2 Apr 2026
+- 2 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added support for Final Cut Pro Creator Studio with auto-detection and an edition picker.
 - Added adjustment clip creation when dragging effects into empty timeline space.
 
@@ -168,9 +184,9 @@
 ### 2.8.1
 
 **🎉 Released:**
-- 2 Apr 2026
+- 2 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Improved Parakeet error messages with download progress and network, disk, memory, and Xcode CLT diagnostics.
 - Expanded the command palette to 120+ entries.
 
@@ -179,9 +195,9 @@
 ### 2.8.0
 
 **🎉 Released:**
-- 2 Apr 2026
+- 2 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added full MCP control with universal menu access and dialog handling.
 - Added effect parameter read/write support for opacity, transform, crop, and volume.
 - Expanded timeline actions to 200+ operations.
@@ -192,9 +208,9 @@
 ### 2.7.0
 
 **🎉 Released:**
-- 2 Apr 2026
+- 2 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added batch export to export timeline clips individually to a folder with one initial destination prompt.
 - Added `batch_export()` and `set_timeline_range()` MCP tools.
 - Added absolute `startTime` and `endTime` positions for timeline clips.
@@ -205,9 +221,9 @@
 ### 2.6.1
 
 **🎉 Released:**
-- 1 Apr 2026
+- 1 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Fixed Parakeet in the release patcher by embedding transcriber source in the patcher app bundle.
 - Added handling for read-only app bundles by copying sources to a writable temp directory before building.
 
@@ -216,9 +232,9 @@
 ### 2.6.0
 
 **🎉 Released:**
-- 1 Apr 2026
+- 1 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Made Parakeet v3 Multilingual the default transcription engine, with Parakeet v2 still available.
 - Added batch transcription with shared model loading, source deduplication, and concurrent diarization.
 - Fixed installation issues caused by hardcoded paths and improved binary deployment.
@@ -229,9 +245,9 @@
 ### 2.5.0
 
 **🎉 Released:**
-- 1 Apr 2026
+- 1 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added Sparkle auto-update support to the patcher.
 - Fixed “Browse Titles...” so titles insert correctly as connected clips.
 - Made NVIDIA Parakeet the default transcription engine.
@@ -242,9 +258,9 @@
 ### 2.4.0
 
 **🎉 Released:**
-- 1 Apr 2026
+- 1 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added NVIDIA Parakeet transcription as the default engine.
 - Added speaker diarization for Parakeet and Apple Speech.
 - Added speaker renaming in the transcript UI.
@@ -255,9 +271,9 @@
 ### 2.3.0
 
 **🎉 Released:**
-- 1 Apr 2026
+- 1 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added a VS Code-style command palette inside Final Cut Pro.
 - Added Apple Intelligence integration for natural-language editing commands.
 - Added silence detection and removal using Apple-native audio analysis.
@@ -269,9 +285,9 @@
 ### 2.2.0
 
 **🎉 Released:**
-- 1 Apr 2026
+- 1 April 2026
 
-**What's New:**
+**🔨 Improvements**
 - Fixed live playhead sync for transcript highlighting during playback.
 - Moved patcher shell commands off the main thread to prevent beachballing.
 - Removed the git dependency by switching downloads to `curl`.
@@ -282,9 +298,9 @@
 ### 2.1.0
 
 **🎉 Released:**
-- 31 Mar 2026
+- 31 March 2026
 
-**What's New:**
+**🔨 Improvements**
 - Added a transcript editor for text-based video editing inside Final Cut Pro.
 - Added word-level transcription, click-to-seek, delete-to-ripple-delete, and drag-to-reorder.
 - Added toolbar, menu bar, and keyboard shortcut integration.
@@ -296,9 +312,9 @@
 ### 2.0.0
 
 **🎉 Released:**
-- 31 Mar 2026
+- 31 March 2026
 
-**What's New:**
+**🔨 Improvements**
 - Introduced **FCPBridge 2.0.0** with direct programmatic control of Final Cut Pro via injected dylib and MCP server.
 - Added 28 MCP tools, 40+ timeline actions, JSON-RPC access, object handles, KVC property access, and FCPXML generation/import.
 - Added patcher app support for copying, injecting, re-signing, and launching a modded Final Cut Pro build.
