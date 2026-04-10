@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.6
+
+**🎉 Released:**
+- 10th April 2026
+
+**🔨 Improvements**
+- Dual timeline workflow updates, cross-window drag and copy, secondary window controls, and browser sizing/layout fixes.
+
+---
+
 ### 3.1.5
 
 **🎉 Released:**
