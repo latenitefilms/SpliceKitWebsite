@@ -1,6 +1,6 @@
 ﻿# SpliceKit
 
-> Direct in-process control of Final Cut Pro via dylib injection.
+> SpliceKit gives superpowers to Apple's Final Cut Pro.
 
 - [SpliceKit](https://splicekit.fcp.cafe/readme.md): SpliceKit
 - [Download](https://splicekit.fcp.cafe/download.md): You can download the latest SpliceKit on GitHub.
