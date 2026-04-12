@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829258466015">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829269966876">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -44,11 +44,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.5.3.829258466015" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.5.3.829269966876" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.829258466015" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.829269966876" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.829258466015" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.829269966876" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.5.3.829269966876" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -338,6 +339,43 @@
 <p>The AI understands your intent, maps it to the right sequence of FCP actions, and executes them — all without leaving the keyboard.</p>
 <p><strong>Remove Silences</strong> uses Apple-native AVFoundation + Accelerate (vDSP) to analyze audio and detect silent segments. No ffmpeg or external dependencies. An options panel lets you configure the detection threshold, minimum silence duration, and padding. The audio analysis runs in the background with a processing indicator, then silences are bladed and ripple-deleted from the timeline.</p>
 <p><strong>Scene Detection</strong> uses histogram-based frame comparison via the Accelerate framework&#x27;s vImage to detect cuts and shot changes. Configurable sensitivity and sample interval. Markers are inserted programmatically at exact timecodes — no playhead movement required — making it fast even on long sequences.</p>
+<hr>
+<h2 id="controlling-splicekit-externally">Controlling SpliceKit Externally</h2>
+<h3 id="python-client-interactive-repl">Python Client (Interactive REPL)</h3>
+<div id="python-client-interactive-repl-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">python3 Scripts/splicekit_client.py</code></pre>
+</doc-codeblock></div>
+<div id="python-client-interactive-repl-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">splicekit&gt; version
+splicekit&gt; classes FFAnchored
+splicekit&gt; methods FFPlayer
+splicekit&gt; props FFAnchoredSequence
+splicekit&gt; super FFAnchoredSequence
+splicekit&gt; ivars FFLibrary</code></pre>
+</doc-codeblock></div>
+<h3 id="direct-tcp">Direct TCP</h3>
+<div id="direct-tcp-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">echo '{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;system.version&quot;,&quot;id&quot;:1}' | nc 127.0.0.1 9876</code></pre>
+</doc-codeblock></div>
+<h3 id="mcp-server">MCP Server</h3>
+<p>First, create a Python virtual environment for the MCP server and install the <code translate="no" v-pre>mcp</code> package:</p>
+<div id="mcp-server-code-1" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">python3 -m venv ~/.venvs/splicekit-mcp
+~/.venvs/splicekit-mcp/bin/python -m pip install --upgrade pip mcp</code></pre>
+</doc-codeblock></div>
+<p>Use the virtual environment&#x27;s Python as the MCP <code translate="no" v-pre>command</code>.</p>
+<p>Point MCP at the server script inside the installed SpliceKit app bundle:</p>
+<div id="mcp-server-code-2" class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-json"><code v-pre class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;splicekit&quot;: {
+      &quot;command&quot;: &quot;/Users/yourname/.venvs/splicekit-mcp/bin/python&quot;,
+      &quot;args&quot;: [&quot;/Applications/SpliceKit.app/Contents/Resources/mcp/server.py&quot;]
+    }
+  }
+}</code></pre>
+</doc-codeblock></div>
+<p>The MCP server connects to the SpliceKit bridge running inside Final Cut Pro on <code translate="no" v-pre>127.0.0.1:9876</code>, so the modded Final Cut Pro must be running.</p>
 
                 
                 <!-- Required only on API pages -->
@@ -410,6 +448,6 @@
 
     <div id="retype-overlay-target"></div>
 
-        <script data-cfasync="false">window.__DOCS__ = { "title": "How To Use", level: 1, icon: "file", hasPrism: false, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/how-to-use.md", pageActions: [{"edit-on-github":{"link":"https://github.com/retypeapp/retype/edit/main/how-to-use.md"}},{"open-in-chatgpt":{"link":"https://chatgpt.com/?q=Read%20and%20summarize%20the%20content%20of%20this%20page%20on%20.%20Then%20help%20answer%20follow-up%20questions%20about%20it.%0A%0Ahttps%3A%2F%2Fsplicekit.fcp.cafe%2Fhow-to-use%2F"}},{"open-in-claude":{"link":"https://claude.ai/new?q=Read%20and%20summarize%20the%20content%20of%20this%20page%20on%20.%20Then%20help%20answer%20follow-up%20questions%20about%20it.%0A%0Ahttps%3A%2F%2Fsplicekit.fcp.cafe%2Fhow-to-use%2F"}}] }</script>
+        <script data-cfasync="false">window.__DOCS__ = { "title": "How To Use", level: 1, icon: "file", hasPrism: true, hasInstagram: false, hasMermaid: false, hasMath: false, tocDepth: 23, "md": "/how-to-use.md", pageActions: [{"edit-on-github":{"link":"https://github.com/retypeapp/retype/edit/main/how-to-use.md"}},{"open-in-chatgpt":{"link":"https://chatgpt.com/?q=Read%20and%20summarize%20the%20content%20of%20this%20page%20on%20.%20Then%20help%20answer%20follow-up%20questions%20about%20it.%0A%0Ahttps%3A%2F%2Fsplicekit.fcp.cafe%2Fhow-to-use%2F"}},{"open-in-claude":{"link":"https://claude.ai/new?q=Read%20and%20summarize%20the%20content%20of%20this%20page%20on%20.%20Then%20help%20answer%20follow-up%20questions%20about%20it.%0A%0Ahttps%3A%2F%2Fsplicekit.fcp.cafe%2Fhow-to-use%2F"}}] }</script>
 </body>
 </html>
