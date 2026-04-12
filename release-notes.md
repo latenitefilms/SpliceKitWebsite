@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.7
+
+**🎉 Released:**
+- 12th April 2026
+
+**🔨 Improvements**
+- Sections bar for timeline song structure, add default transition to all clips command, fuzzy search stop-word handling. Watch [video[(https://youtu.be/plirvqHe6o0).
+
+---
+
 ### 3.1.6
 
 **🎉 Released:**
