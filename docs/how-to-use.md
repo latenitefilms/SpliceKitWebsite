@@ -42,6 +42,14 @@ Click **Launch FCP** to launch the "patched" Final Cut Pro:
 
 ---
 
+## Sections
+
+Sections bar for timeline song structure, add default transition to all clips command, fuzzy search stop-word handling.
+
+https://www.youtube.com/watch?v=plirvqHe6o0
+
+---
+
 ## Transcript Editor — Text-Based Video Editing
 
 [![Transcript Editor Demo](https://img.youtube.com/vi/JxxDSH4Ly0I/maxresdefault.jpg)](https://www.youtube.com/watch?v=JxxDSH4Ly0I)
