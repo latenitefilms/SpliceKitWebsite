@@ -88,3 +88,54 @@ The AI understands your intent, maps it to the right sequence of FCP actions, an
 **Remove Silences** uses Apple-native AVFoundation + Accelerate (vDSP) to analyze audio and detect silent segments. No ffmpeg or external dependencies. An options panel lets you configure the detection threshold, minimum silence duration, and padding. The audio analysis runs in the background with a processing indicator, then silences are bladed and ripple-deleted from the timeline.
 
 **Scene Detection** uses histogram-based frame comparison via the Accelerate framework's vImage to detect cuts and shot changes. Configurable sensitivity and sample interval. Markers are inserted programmatically at exact timecodes — no playhead movement required — making it fast even on long sequences.
+
+---
+
+## Controlling SpliceKit Externally
+
+### Python Client (Interactive REPL)
+
+```bash
+python3 Scripts/splicekit_client.py
+```
+
+```
+splicekit> version
+splicekit> classes FFAnchored
+splicekit> methods FFPlayer
+splicekit> props FFAnchoredSequence
+splicekit> super FFAnchoredSequence
+splicekit> ivars FFLibrary
+```
+
+### Direct TCP
+
+```bash
+echo '{"jsonrpc":"2.0","method":"system.version","id":1}' | nc 127.0.0.1 9876
+```
+
+### MCP Server
+
+First, create a Python virtual environment for the MCP server and install the `mcp` package:
+
+```bash
+python3 -m venv ~/.venvs/splicekit-mcp
+~/.venvs/splicekit-mcp/bin/python -m pip install --upgrade pip mcp
+```
+
+Use the virtual environment's Python as the MCP `command`.
+
+Point MCP at the server script inside the installed SpliceKit app bundle:
+
+```json
+{
+  "mcpServers": {
+    "splicekit": {
+      "command": "/Users/yourname/.venvs/splicekit-mcp/bin/python",
+      "args": ["/Applications/SpliceKit.app/Contents/Resources/mcp/server.py"]
+    }
+  }
+}
+```
+
+The MCP server connects to the SpliceKit bridge running inside Final Cut Pro on `127.0.0.1:9876`, so the modded Final Cut Pro must be running.
