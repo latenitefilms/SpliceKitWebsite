@@ -7,7 +7,7 @@
 - [System Requirements](https://splicekit.fcp.cafe/system-requirements.md): SpliceKit works with Final Cut Pro v12 (lifetime/perpetual) and Final Cut Pro Creator Studio v12 (subscription).
 - [How To Use](https://splicekit.fcp.cafe/how-to-use.md): This page explains how to setup and use SpliceKit.
 - [Support](https://splicekit.fcp.cafe/support.md): If you run into any bugs, crashes, or you have a feature request, you can post an issue here.
-- [Frequently Asked Questions](https://splicekit.fcp.cafe/faq.md): A few things worth clarifying up front -- this isn't for everyone, but it's very easy to set up if you do want to try it.
+- [Frequently Asked Questions](https://splicekit.fcp.cafe/faq.md): SpliceKit lets you control Final Cut Pro with text commands and AI instead of clicking buttons and dragging things around.
 - [Troubleshooting](https://splicekit.fcp.cafe/troubleshooting.md): Apologies in advance if you have any trouble using SpliceKit.
 - [Contribute](https://splicekit.fcp.cafe/contribute.md): SpliceKit is open source and anyone can contribute to it.
 - [Release Notes](https://splicekit.fcp.cafe/release-notes.md): 🎉 Released:

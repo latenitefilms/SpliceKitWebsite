@@ -1,15 +1,108 @@
 # Frequently Asked Questions
 
-## Is This Legal / Safe to Use?
+# What Is SpliceKit?
 
-A few things worth clarifying up front -- this isn't for everyone, but it's very easy to set up if you do want to try it.
+SpliceKit lets you control Final Cut Pro with text commands and AI instead of clicking buttons and dragging things around.
 
-**On reverse engineering and the EULA:** Reverse engineering for interoperability is explicitly protected under the DMCA ([17 U.S.C. § 1201(f)](https://www.law.cornell.edu/uscode/text/17/1201)) and similar laws in the EU. This is the same legal basis that allows tools like Homebrew, Hammerspoon, and countless other macOS utilities that hook into Apple apps. Apple's EULA doesn't override federal law. That said, SpliceKit doesn't really involve reverse engineering in the traditional sense -- once the library is loaded, Final Cut Pro exposes all of its own classes and methods through the Objective-C runtime. There's no decompilation required.
+It's also a plugin framework - so you can build addons and plugins to do all kinds of awesome things that you couldn't normally do with FCP plugins.
 
-**On "injecting code":** What SpliceKit does is no different from what accessibility tools, screen readers, and automation utilities do every day on macOS. `DYLD_INSERT_LIBRARIES` is a documented Apple mechanism -- it's not an exploit. Apps like BetterTouchTool, Alfred, and Bartender all inject into running processes using the same techniques.
+OK, But What Does That Actually Mean?
 
-**On Apple disabling your Apple ID:** There is no precedent for Apple disabling an Apple ID for running a modified local app. Apple can't even distinguish between "ran a modded app" and "loaded a dylib for debugging in Xcode," which developers do constantly. Apple's focus is on protecting the App Store and code signing for distribution -- not policing what developers do on their own machines.
+Final Cut Pro is a powerful video editor, but everything in it is manual. You click, drag, scrub, hunt through menus. That's fine for some tasks, but painful for others:
 
-**The real risk** is the same as any unsigned software: make sure you trust the source. The code is fully open, the techniques are well-established, and nothing here is novel or dangerous from a security perspective.
+- **Removing silences** from an hour-long interview? That's hundreds of manual cuts.
+- **Adding markers** at every beat of a song? Click... click... click...
+- **Applying the same color grade** to 50 clips? Hope you like copy-paste.
 
-On a personal note -- I've been frustrated by how little progress Final Cut Pro has made over the years, and my hope is that this project can help it finally get some of the features it desperately needs. There's a huge precedent in modding software and games. I've modded quite a few games where the developers officially adopted features based on community work. It can be a really productive relationship where proof of concepts demonstrate what would be genuinely useful to add officially.
+SpliceKit is really a **collection of plugins** that already adds a ton of quality-of-life features to FCP out of the box, **plus** an AI framework and plugin system that makes it easy to add even more.
+
+Here's some of what's already built in:
+
+- **Silence Removal** -- automatically detects and removes dead air from interviews and podcasts
+- **Transcript Editor** -- transcribes your footage, shows you the words, and lets you edit your video by editing the text. Delete a sentence? The video gets cut too. Drag words around? The clips move to match.
+- **Command Palette** (Cmd+Shift+P) -- search and run any editing command by typing, instead of hunting through menus
+- **Scene Detection** -- automatically finds every cut/scene change in your footage
+- **Beat Detection** -- finds beats in music so you can sync edits to the rhythm
+- **Batch Export** -- export every clip on your timeline individually, with all effects baked in
+- **Social Media Captions** -- auto-generate word-by-word animated captions (TikTok/Reels style)
+- **AI Editing** -- describe what you want in plain English and let an AI assistant do the work
+
+And because SpliceKit is a plugin framework, new features get added all the time. You can even **create your own plugins with the help of AI** -- describe what you want a plugin to do, and Claude can help you build it.
+
+---
+
+How Does It Work?
+
+Here's the non-technical version:
+
+1. **SpliceKit patches your copy of Final Cut Pro.**
+
+It makes a separate copy of Final Cut Pro in your home folder and adds a small plugin (a `dylib`) to it.
+
+Your original Final Cut Pro stays untouched.
+
+2. **When you launch the patched Final Cut Pro, SpliceKit wakes up inside it.**
+
+It can now see and control everything FCP does -- the timeline, your clips, effects, playback, all of it.
+
+3. **You talk to SpliceKit through text.** There are a few ways:
+
+- A **Command Palette** inside Final Cut Pro (press `COMMAND+SHIFT+P`) where you type what you want
+- A **Transcript Panel** for text-based editing
+- An **AI assistant** (like Claude) that can run editing commands for you
+- A **Python scripting** interface if you want to write your own automation
+
+Think of it like this: Final Cut Pro is a car with only a steering wheel and pedals. SpliceKit adds voice control and autopilot.
+
+---
+
+## Is It Safe?
+
+This is the question everyone asks, so let's break it down:
+
+**Will it break my Mac or my projects?**
+
+**No.** SpliceKit makes a *copy* of Final Cut Pro in `~/Applications/SpliceKit/` and patches the copy.
+
+Your original Final Cut Pro from the App Store is never modified. Your libraries, projects, and media files are not changed by the patching process.
+
+That said, SpliceKit *does* perform real edits when you ask it to. Just like any editing tool, you can undo (`COMMAND+Z`) if something goes wrong, and you should keep backups of important projects.
+
+**Will Apple ban my account?**
+
+**No.** SpliceKit runs entirely on your local machine. It doesn't modify Apple's servers, bypass DRM on content, or do anything online. It's the software equivalent of opening the hood of your own car and adding a turbocharger - Apple doesn't monitor or restrict what you run locally.
+
+Many popular Mac apps work the same way under the hood (BetterTouchTool, accessibility tools, etc.).
+
+**Is it legal?**
+
+**Yes.** Reverse engineering for interoperability is explicitly protected under:
+
+- **DMCA Section 1201(f)** (US law) -- you're allowed to reverse-engineer software to make it work with other programs
+- **EU Software Directive Article 6** -- same principle in Europe
+
+SpliceKit is MIT licensed (open source, free to use and modify).
+
+**What are the actual risks?**
+
+Being honest:
+
+- **Future Final Cut Pro updates could break compatibility.** When Apple updates Final Cut Pro, SpliceKit may need to be re-patched. This is an inconvenience, not a danger.
+- **It uses internal Final Cut Pro APIs that Apple doesn't document.** This means some features might behave unexpectedly on edge cases. The undo button is your friend.
+- **It disables Final Cut Pro's sandbox** (the security boundary that limits what FCP can access on your system). This is required for the plugin to work. In practice, this just means the patched Final Cut Pro has the same file access as any other app on your Mac.
+
+---
+
+## Who Is This For?
+
+**Everyone who uses Final Cut Pro.**
+
+Seriously. You don't need to be a programmer or a power user to benefit from SpliceKit. Most of the built-in features are things that every editor will appreciate:
+
+- **Casual editors** - silence removal, transcript editing, and the command palette make everyday editing faster and less tedious
+- **Professional editors** - batch export, scene detection, beat sync, and caption generation save hours on real projects
+- **Content creators** - auto-generate TikTok/Reels-style captions, quickly cut down long recordings, batch-process clips for social media
+- **People who want AI-assisted editing** - describe edits in plain English and let an AI handle the repetitive work for you
+- **Developers and tinkerers** - build your own plugins in Python, Lua, or with AI assistance. The plugin framework gives you access to everything inside Final Cut Pro, so you can create tools that Apple's official plugin system doesn't support
+
+The built-in plugins already handle the most common pain points. But if you ever think *"I wish Final Cut Pro could do X"* - SpliceKit probably makes it possible, and AI can help you build it even if you've never written a line of code.
