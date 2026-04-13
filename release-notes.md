@@ -1,5 +1,37 @@
 # Release Notes
 
+### 3.1.10
+
+**🎉 Released:**
+- 14th April 2026
+
+**🐞 Bug Fix:**
+- Fix CloudKit crash on Final Cut Pro 12.2+, patcher diagnostic logging to `~/Library/Logs/SpliceKit/patcher.log`, comprehensive startup diagnostics in `dylib`, disable spring-loaded blade.
+
+---
+
+### 3.1.8
+
+**🎉 Released:**
+- 14th April 2026
+
+**🐞 Bug Fixes:**
+- **Transcript persistence across projects** — switching projects no longer shows stale transcript from previous project; added `transcript.clear` RPC endpoint
+- **addTodoMarker fixed** — was returning "No responder handled"; now uses direct sequence method
+- **Silence detection** — was returning 0 silences on clips with obvious pauses; improved threshold algorithm and added start-to-start interval detection
+- **Timeline duration** — was reporting 0.000s; now falls back to summing spine clip durations
+- **add_markers_at_times offset** — now accounts for timeline start offset (e.g. 01:00:00:00)
+
+**🥳 New Features:**
+- **OpenTimelineIO import/export** — universal timeline exchange with DaVinci Resolve, Premiere Pro, Avid (`.otio`, `.edl`, `.aaf`)
+- **Native OTIO-to-FCPXML converter** — frame-exact conversion with canonical SMPTE timebases
+- **Compound clip drilling** — `get_timeline_clips` now exposes `isCompound`, `nestedItemCount`, and `include_nested` parameter
+- **Batch editing tools** — `apply_transition_to_all_clips`, `batch_apply_effect`, `batch_color_correct`
+- **Expanded command palette** — full categorized action lists, comprehensive AI capabilities prompt
+- **Lua example** — `shuffle_clips.lua` script
+
+---
+
 ### 3.1.7
 
 **🎉 Released:**
