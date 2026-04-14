@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.12
+
+**🎉 Released:**
+- 14th April 2026
+
+**🔨 Improvements**
+- Live audio metering in mixer panel, Final Cut Pro role colors, keyframed volume support.
+
+---
+
 ### 3.1.11
 
 **🎉 Released:**
