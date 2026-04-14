@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.13
+
+**🎉 Released:**
+- 14th April 2026
+
+**🐞 Bug Fix:**
+- Mixer metering works without Audio Meters panel, CALayer tree search for mini transport meters.
+
+---
+
 ### 3.1.12
 
 **🎉 Released:**
