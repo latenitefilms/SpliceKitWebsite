@@ -1,5 +1,35 @@
 # Release Notes
 
+### 3.1.142
+
+**🎉 Released:**
+- 15th April 2026
+
+**🐞 Bug Fix:**
+- Fix audio mixer clip discovery for nested compound clips and storylines, handle deduplication, caption panel visibility guard
+
+---
+
+### 3.1.141
+
+**🎉 Released:**
+- 15th April 2026
+
+**🐞 Bug Fix:**
+- Fix Remove All Keyframes command: recursive discovery of keyframe targets across child clips, effect stacks, and audio channels
+
+---
+
+### 3.1.14
+
+**🎉 Released:**
+- 15th April 2026
+
+**🥳 New Features:**
+- **All-new Audio Mixer UI:** role-colored faders with gradient strips, segmented LED meters with clipping detection, per-fader automation arming, real-time volume during playback, keyframe management
+
+---
+
 ### 3.1.13
 
 **🎉 Released:**
