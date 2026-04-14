@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829428894043">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829440982481">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.5.3.829428894043" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.5.3.829440982481" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.829428894043" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.829440982481" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.829428894043" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.829440982481" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -249,6 +249,16 @@
 
                 <!-- Page content  -->
 <h1 id="release-notes">Release Notes</h1>
+<h3 id="3111">3.1.11</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>14th April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F41E;</span> Bug Fix:</strong></p>
+<ul>
+<li>Fix transcript editor missing connected clips (<code translate="no" v-pre>FFAnchoredClip</code> URL resolution), mixer panel, caption enhancements, CloudContent diagnostic logging, patcher launch monitoring.</li>
+</ul>
+<hr>
 <h3 id="3110">3.1.10</h3>
 <p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
 <ul>
@@ -257,6 +267,20 @@
 <p><strong><span class="docs-emoji">&#x1F41E;</span> Bug Fix:</strong></p>
 <ul>
 <li>Fix CloudKit crash on Final Cut Pro 12.2+, patcher diagnostic logging to <code translate="no" v-pre>~/Library/Logs/SpliceKit/patcher.log</code>, comprehensive startup diagnostics in <code translate="no" v-pre>dylib</code>, disable spring-loaded blade.</li>
+</ul>
+<hr>
+<h3 id="319">3.1.9</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>14th April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F41E;</span> Bug Fixes:</strong></p>
+<ul>
+<li>Fix patcher signing on macOS 15.7.3 — the patcher was applying only 1 entitlement (cs-disable-library-validation) instead of the full set needed for ad-hoc signing. This caused the re-signed app to launch unsigned on some systems, triggering a CloudKit crash (EXC_BREAKPOINT in CloudContentCatalog.updateCatalogAndRegistry()). Now applies all 4 required entitlements including explicit app-sandbox=false to prevent CloudKit entitlement validation failures. Fixed across all patcher paths: GUI app (initial patch + update), shell script, and entitlements.plist. (Fixes #23)</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F4C4;</span> Documentation:</strong></p>
+<ul>
+<li>Added plain-English explainer — What Is SpliceKit? covers what it is, how it works, and whether it&#x27;s safe, written for non-technical users. Linked from the top of the README.</li>
 </ul>
 <hr>
 <h3 id="318">3.1.8</h3>
