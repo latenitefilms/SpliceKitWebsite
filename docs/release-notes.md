@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.11
+
+**🎉 Released:**
+- 14th April 2026
+
+**🐞 Bug Fix:**
+- Fix transcript editor missing connected clips (`FFAnchoredClip` URL resolution), mixer panel, caption enhancements, CloudContent diagnostic logging, patcher launch monitoring.
+
+---
+
 ### 3.1.10
 
 **🎉 Released:**
@@ -7,6 +17,19 @@
 
 **🐞 Bug Fix:**
 - Fix CloudKit crash on Final Cut Pro 12.2+, patcher diagnostic logging to `~/Library/Logs/SpliceKit/patcher.log`, comprehensive startup diagnostics in `dylib`, disable spring-loaded blade.
+
+---
+
+### 3.1.9
+
+**🎉 Released:**
+- 14th April 2026
+
+**🐞 Bug Fixes:**
+- Fix patcher signing on macOS 15.7.3 — the patcher was applying only 1 entitlement (cs-disable-library-validation) instead of the full set needed for ad-hoc signing. This caused the re-signed app to launch unsigned on some systems, triggering a CloudKit crash (EXC_BREAKPOINT in CloudContentCatalog.updateCatalogAndRegistry()). Now applies all 4 required entitlements including explicit app-sandbox=false to prevent CloudKit entitlement validation failures. Fixed across all patcher paths: GUI app (initial patch + update), shell script, and entitlements.plist. (Fixes #23)
+
+**📄 Documentation:**
+- Added plain-English explainer — What Is SpliceKit? covers what it is, how it works, and whether it's safe, written for non-technical users. Linked from the top of the README.
 
 ---
 
