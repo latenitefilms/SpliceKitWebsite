@@ -1,12 +1,4 @@
-# How To Use
-
-This page explains how to setup and use **SpliceKit**.
-
-If you run into any problems the best place for support is the [FCP Cafe Discord](https://ltnt.tv/discord).
-
----
-
-## Installation
+# Installation
 
 Make sure you have **Final Cut Pro v12** (lifetime/perpetual) and/or **Final Cut Pro Creator Studio v12** (subscription) installed.
 
