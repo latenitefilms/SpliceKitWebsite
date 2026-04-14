@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-# What Is SpliceKit?
+## What Is SpliceKit?
 
 SpliceKit lets you control Final Cut Pro with text commands and AI instead of clicking buttons and dragging things around.
 
@@ -31,7 +31,7 @@ And because SpliceKit is a plugin framework, new features get added all the time
 
 ---
 
-How Does It Work?
+## How Does It Work?
 
 Here's the non-technical version:
 
