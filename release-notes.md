@@ -1,5 +1,25 @@
 # Release Notes
 
+### 3.1.145
+
+**🎉 Released:**
+- 16th April 2026
+
+**🔨 Improvements**
+- Audio Mixer: managed role-bus effects, solo/mute controls, FX menu, state mirroring, diagnostics.
+
+---
+
+### 3.1.144
+
+**🎉 Released:**
+- 16th April 2026
+
+**🔨 Improvements**
+- Transcript Editor diagnostics, timestamp mapping fixes, speaker cleanup, and faster pause deletion.
+
+---
+
 ### 3.1.143
 
 **🎉 Released:**
