@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.143
+
+**🎉 Released:**
+- 15th April 2026
+
+**🔨 Improvements**
+- Add song cut workflow for beat-synced video assembly from sequence-backed sources. Fix cumulative frame drift in FCPXML builds, fix connected song alignment, add half-beat pairing rule, add sequence name substring matching, resolve timeline clips to browser equivalents for native insertion.
+
+---
+
 ### 3.1.142
 
 **🎉 Released:**
