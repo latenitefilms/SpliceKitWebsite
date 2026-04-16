@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.148
+
+**🎉 Released:**
+- 16th April 2026
+
+**🔨 Improvements**
+- Automatically expose Apple's AUSoundIsolation effect on startup so Voice Isolation stays available in the audio effects browser across launches.
+
+---
+
 ### 3.1.147
 
 **🎉 Released:**
