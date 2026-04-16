@@ -1,5 +1,25 @@
 # Release Notes
 
+### 3.1.147
+
+**🎉 Released:**
+- 16th April 2026
+
+**🐞 Bug Fix:**
+- Fix OTIO and FCPXML import reliability: preserve source in-points, normalize media URLs, avoid library-picker fallbacks, and import projects through the in-process pipeline.
+
+---
+
+### 3.1.146
+
+**🎉 Released:**
+- 16th April 2026
+
+**🐞 Bug Fix:**
+- Fix an Audio Mixer bug that could cause a major performance drop after adding audio bus effects. Mixer polling now avoids repeated effect-stack mutations while keeping bus effects attached to their roles.
+
+---
+
 ### 3.1.145
 
 **🎉 Released:**
