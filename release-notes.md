@@ -1,5 +1,25 @@
 # Release Notes
 
+### 3.1.151
+
+**🎉 Released:**
+- 17th April 2026
+
+**🐞 Bug Fix:**
+- Fix missing BRAW support on fresh installs. The patcher was shipping only the SpliceKit framework dylib — the VideoToolbox decoder and MediaToolbox format-reader bundles that actually register .braw with Final Cut Pro were never getting installed. Drag-and-drop and Import Media now work out of the box on every machine.
+
+---
+
+### 3.1.150
+
+**🎉 Released:**
+- 17th April 2026
+
+**🐞 Bug Fix:**
+- Fix a BRAW decode crash: when VideoToolbox tore down a session while a decode was in flight on our BRAW serial queue, the race could free the host callback mid-Unbind and abort FCP. Release now serializes through the same queue as decode.
+
+---
+
 ### 3.1.149
 
 **🎉 Released:**
