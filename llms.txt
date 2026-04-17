@@ -18,6 +18,7 @@
 ## Features
 
 - [Audio Mixer](https://splicekit.fcp.cafe/features/audio-mixer.md): The Audio Mixer is still a work in progress, but it's already very powerful.
+- [Blackmagic RAW](https://splicekit.fcp.cafe/features/braw.md): SpliceKit brings full native Blackmagic RAW support to Final Cut Pro.
 - [Command Palette](https://splicekit.fcp.cafe/features/command-palette.md): Apple Intelligence for Final Cut Pro.
 - [MCP Server](https://splicekit.fcp.cafe/features/mcp-server.md): First, create a Python virtual environment for the MCP server and install the mcp package:
 - [Sections](https://splicekit.fcp.cafe/features/sections.md): Sections bar for timeline song structure, add default transition to all clips command, fuzzy search stop-word handling.
