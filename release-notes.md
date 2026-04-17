@@ -1,5 +1,25 @@
 # Release Notes
 
+### 3.2.02
+
+**🎉 Released:**
+- 18th April 2026
+
+**🐞 Bug Fixes:**
+Fix jerky Effects browser category sidebar scroll on installs with many effects. Every row vended during scroll was re-filtering the full effect registry with ~10k locale-aware string comparisons per frame (via FFBKEffectLibraryFolder.items → FFEffect.userVisibleEffectIDs → bsearch); those results are now cached per-folder and invalidated on effect-registry notifications.
+
+---
+
+### 3.2.01
+
+**🎉 Released:**
+- 18th April 2026
+
+**🥳 New Features:**
+- Native Blackmagic BRAW Color Grading. New BRAW Settings inspector menu modeled after FCP's ProRes RAW panel — Gamma / Gamut / Color Science Gen, ISO / Color Temp / Tint / Exposure / Analog Gain, full tone curve (Saturation, Contrast, Midpoint, Highlights, Shadows, Black Level, White Level), Highlight Recovery, Gamut Compression, and 3D LUT Mode. Open it from the Info inspector by clicking 'Modify BRAW…' on any selected .braw clip. Fixed playback for several BRAW files that were silently dropping persisted color settings on library reopen — the in-process decoder now primes its settings cache from the asset's persisted dict during render setup, so adjustments apply on the first frame after relaunch instead of only after touching a slider. Also fixed a thumbnail-thread race that could crash FCP on rapid slider drags.
+
+---
+
 ### 3.1.151
 
 **🎉 Released:**
