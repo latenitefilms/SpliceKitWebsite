@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.1.149
+
+**🎉 Released:**
+- 17th April 2026
+
+**🥳 New Features:**
+- Native Blackmagic RAW (BRAW) playback in Final Cut Pro — import, preview, and edit .braw files from URSA Cine / BMPCC / Pocket 4K/6K cameras without transcoding. Works with every codec variant we've seen in the wild (braw, brxq, brst, brvn) including URSA Cine 17K. Playback runs through the Blackmagic RAW SDK with zero-copy Metal decode and realtime framerates at 6K+.
+
+---
+
 ### 3.1.148
 
 **🎉 Released:**
