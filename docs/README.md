@@ -85,7 +85,9 @@ Describe what you want. Hand the spec to Claude. It writes the plugin against th
 
 ---
 
-## Example Plugins (What Ships in the Box)
+## Example Plugins
+
+What Ships in the Box...
 
 Every one of these is a plugin. They're bundled so you can use SpliceKit the day you install it, and they double as working examples for anyone building their own.
 
