@@ -14,7 +14,7 @@
 
 ## The Three Pillars
 
-### 🎹 1. The Command Palette
+### 🎹 The Command Palette
 
 *One keystroke to anything.*
 
@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=Q4GjHmmUISw
 
 ---
 
-### 🤖 2. The MCP Server
+### 🤖 The MCP Server
 
 *Claude (or any other LLM) can drive your editor — and teach it new tricks.*
 
@@ -63,7 +63,7 @@ When that happens, don't settle for the workaround. **Tell it to build the abili
 
 ---
 
-### 🧩 3. The Plugin Framework
+### 🧩 The Plugin Framework
 
 *Everything is a plugin.*
 
@@ -152,8 +152,10 @@ Drop Blackmagic RAW (`.braw`) and VP9/WebM files straight onto your timeline —
 
 ---
 
-### Dual Timelines, FlexMusic, Montage Maker, OpenTimelineIO exchange, Lua REPL, in-process debugger…
-…and more. Every one of them is code in [`Sources`](https://github.com/elliotttate/SpliceKit/tree/main/Sources) you can read, fork, or gut for parts.
+### Lots More!
+Dual Timelines, FlexMusic, Montage Maker, OpenTimelineIO exchange, Lua REPL, in-process debugger and more.
+
+Every one of them is code in [`Sources`](https://github.com/elliotttate/SpliceKit/tree/main/Sources) you can read, fork, or gut for parts.
 
 ---
 
