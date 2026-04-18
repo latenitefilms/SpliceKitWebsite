@@ -1,8 +1,20 @@
 # Command Palette
 
-Apple Intelligence for Final Cut Pro.
+*One keystroke to anything.*
 
-Hit **COMMAND+SHIFT+P** inside the modded FCP to open a VS Code-style command palette with fuzzy search across 100+ editing actions. Type what you want to do in plain English and Apple Intelligence (on-device LLM via FoundationModels) translates your intent into editing actions.
+Hit **COMMAND+SHIFT+P** inside the patched Final Cut Pro. Fuzzy-search 100+ built-in editing actions — blade, trim, color, speed, markers, effects, transitions, export — or type plain English and let **Apple Intelligence** (on-device, private) figure out what you meant.
+
+https://www.youtube.com/watch?v=Q4GjHmmUISw
+
+**Try saying…**
+
+- *"add markers every 5 seconds"*
+- *"slow this clip to half speed"*
+- *"blade at every scene change"*
+- *"remove all the silences"*
+- *"add a cross dissolve"*
+
+> No more menu hunting. No more memorizing shortcuts. No cloud.
 
 **Built-in commands include:**
 
