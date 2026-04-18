@@ -6,13 +6,15 @@
 
 Some of the highlights include:
 
-- Native Blackmagic RAW Support with full RAW controls
-- Audio Mixer with Master Bus
-- MCP Server so that Claude Code, Codex and ChatGPT has full control over Final Cut Pro
-- New "Sections" feature on the Final Cut Pro Timeline
-- Transcript Editor
-- Command Palette with on-device LLM support - allowing you to "chat" to Final Cut Pro
-- Lua scripting environment - allowing you to easily write your own automation
+- **Native Blackmagic RAW Support with full RAW controls**
+- **Audio Mixer with Master Bus**
+- **LiveCam — native webcam booth that records direct to your Library or active Timeline**
+- **URL Import Workflow — pull remote media straight into your Library or Timeline**
+- **MCP Server so that Claude Code, Codex and ChatGPT has full control over Final Cut Pro**
+- **New "Sections" feature on the Final Cut Pro Timeline**
+- **Transcript Editor**
+- **Command Palette with on-device LLM support - allowing you to "chat" to Final Cut Pro**
+- **Lua scripting environment - allowing you to easily write your own automation**
 
 > [:icon-desktop-download: Download SpliceKit for free](/download/)
 
