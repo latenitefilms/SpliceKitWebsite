@@ -1,5 +1,26 @@
 # Release Notes
 
+### 3.2.04
+
+**🎉 Released:**
+- 18th April 2026
+
+**🥳 New Features:**
+
+- **LiveCam** — native webcam booth that records direct to your Library or active timeline without leaving Final Cut Pro. Live preview with looks, color/exposure/contrast/saturation/temperature/sharpness/glow adjustments, audio meter, mirror, date/time stamp overlay, and Library / Timeline placement (Append, At Playhead, or Connected Above). Subject-lift green screen uses Visions `VNGenerateForegroundInstanceMaskRequest` (macOS 14+) for a tight, edge-aware matte that works on people and objects, with a custom Metal pipeline that runs joint-bilateral edge refinement, signed choke, temporal smoothing, spill suppression, and light wrap every frame; falls back to person segmentation on macOS 12-13. Transparent recording — pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha plane via `CIRenderDestination` + `kVTCompressionPropertyKey_AlphaChannelMode`, so the clip drops onto your timeline ready to composite without an external keyer. Open via the LiveCam toolbar button, the Enhancements menu, the Command Palette, or `liveCam.show` / `open_livecam`. URL import now auto-discovers `yt-dlp` and `ffmpeg` from your login shell PATH and symlinks them into the SpliceKit tools dir at install time, so Homebrew installs work without `make url-import-tools`. Also fixes scroll dead space in the Captions panel.
+
+---
+
+### 3.2.03
+
+**🎉 Released:**
+- 18th April 2026
+
+**🥳 New Features:**
+- **URL import workflow** — pull remote media straight into your library or timeline. Supports direct `.mp4`/`.mov`/`.m4v`/`.webm` links plus YouTube VOD URLs. Access via the Command Palette (**Import URL to Library** / **Import URL to Timeline**), Lua, or MCP (`import_url`, `import_url_status`, `cancel_import_url`). Three placement modes: import-only, insert at playhead, append to end. Async downloads with live progress, cancellation, and a clear guard against live streams. Requires `yt-dlp` and `ffmpeg` on PATH — run `brew install yt-dlp ffmpeg` and `make url-import-tools` to wire them in. Thanks to @JT-Apps (#40).
+
+---
+
 ### 3.2.02
 
 **🎉 Released:**
