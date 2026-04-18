@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829868438952">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829869772949">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -44,11 +44,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="static/favicon.ico" />
-    <link href="resources/css/retype.css?v=4.5.3.829868438952" rel="stylesheet">
+    <link href="resources/css/retype.css?v=4.5.3.829869772949" rel="stylesheet">
 
-    <script data-cfasync="false" src="resources/js/config.js?v=4.5.3.829868438952" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="resources/js/config.js?v=4.5.3.829869772949" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="resources/js/lunr.js?v=4.5.3.829868438952" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="resources/js/lunr.js?v=4.5.3.829869772949" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -249,7 +249,7 @@
 </figure>
 <hr>
 <h2 id="the-three-pillars">The Three Pillars</h2>
-<h3 id="-1-the-command-palette"><span class="docs-emoji">&#x1F3B9;</span> 1. The Command Palette</h3>
+<h3 id="-the-command-palette"><span class="docs-emoji">&#x1F3B9;</span> The Command Palette</h3>
 <p><em>One keystroke to anything.</em></p>
 <p>Hit <strong>COMMAND+SHIFT+P</strong> inside the patched Final Cut Pro. Fuzzy-search 100+ built-in editing actions — blade, trim, color, speed, markers, effects, transitions, export — or type plain English and let <strong>Apple Intelligence</strong> (on-device, private) figure out what you meant.</p>
 <div class="aspect-video w-full rounded-lg overflow-hidden mb-6 shadow-lg dark:shadow-lg">
@@ -266,7 +266,7 @@
 <p>No more menu hunting. No more memorizing shortcuts. No cloud.</p>
 </blockquote>
 <hr>
-<h3 id="-2-the-mcp-server"><span class="docs-emoji">&#x1F916;</span> 2. The MCP Server</h3>
+<h3 id="-the-mcp-server"><span class="docs-emoji">&#x1F916;</span> The MCP Server</h3>
 <p><em>Claude (or any other LLM) can drive your editor — and teach it new tricks.</em></p>
 <p>SpliceKit ships with an MCP server that exposes ~200 tools covering every major FCP subsystem. Point <strong>Claude Code</strong>, <strong>Claude Desktop</strong>, or any MCP-compatible AI client at it and you can say things like:</p>
 <ul>
@@ -306,7 +306,7 @@
 <p>Every clumsy first attempt is a prompt to turn that workflow into a first-class feature. The editor you use six months from now is smarter than the one you installed today — and most of that improvement won&#x27;t come from the SpliceKit team. It&#x27;ll come from you, and from the community shipping plugins back.</p>
 </blockquote>
 <hr>
-<h3 id="-3-the-plugin-framework"><span class="docs-emoji">&#x1F9E9;</span> 3. The Plugin Framework</h3>
+<h3 id="-the-plugin-framework"><span class="docs-emoji">&#x1F9E9;</span> The Plugin Framework</h3>
 <p><em>Everything is a plugin.</em></p>
 <p>SpliceKit isn&#x27;t a feature list — it&#x27;s a platform. Once the SpliceKit dylib is loaded into Final Cut Pro, the entire ObjC runtime (78,000+ classes, including all private APIs) is open for plugins to use.</p>
 <h4 id="what-a-plugin-can-do">What a plugin can do</h4>
@@ -364,8 +364,9 @@
 <h3 id="native-braw-and-vp9-support">Native BRAW and VP9 Support</h3>
 <p>Drop Blackmagic RAW (<code translate="no" v-pre>.braw</code>) and VP9/WebM files straight onto your timeline — no transcoding, no wrappers, no third-party toolkit install. SpliceKit ships a BRAW RAW Processor and a VP9 decoder that plug into Final Cut Pro through Apple&#x27;s MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode. A huge unlock for anyone cutting Blackmagic camera footage or pulling down WebM video from the web.</p>
 <hr>
-<h3 id="dual-timelines-flexmusic-montage-maker-opentimelineio-exchange-lua-repl-in-process-debugger">Dual Timelines, FlexMusic, Montage Maker, OpenTimelineIO exchange, Lua REPL, in-process debugger…</h3>
-<p>…and more. Every one of them is code in <a href="https://github.com/elliotttate/SpliceKit/tree/main/Sources" class="outbound" target="_blank"><span><code translate="no" v-pre>Sources</code></span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> you can read, fork, or gut for parts.</p>
+<h3 id="lots-more">Lots More!</h3>
+<p>Dual Timelines, FlexMusic, Montage Maker, OpenTimelineIO exchange, Lua REPL, in-process debugger and more.</p>
+<p>Every one of them is code in <a href="https://github.com/elliotttate/SpliceKit/tree/main/Sources" class="outbound" target="_blank"><span><code translate="no" v-pre>Sources</code></span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> you can read, fork, or gut for parts.</p>
 <hr>
 <h2 id="is-it-safe">Is it safe?</h2>
 <p>Whilst powerful tools like <a href="https://commandpost.fcp.cafe" class="outbound" target="_blank"><span>CommandPost</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> have existed for over a decade, SpliceKit uses safe but powerful code injection to get inside Final Cut Pro, giving you <strong>complete control</strong>.</p>
