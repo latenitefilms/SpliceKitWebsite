@@ -106,3 +106,19 @@ Seriously. You don't need to be a programmer or a power user to benefit from Spl
 - **Developers and tinkerers** - build your own plugins in Python, Lua, or with AI assistance. The plugin framework gives you access to everything inside Final Cut Pro, so you can create tools that Apple's official plugin system doesn't support
 
 The built-in plugins already handle the most common pain points. But if you ever think *"I wish Final Cut Pro could do X"* - SpliceKit probably makes it possible, and AI can help you build it even if you've never written a line of code.
+
+---
+
+## Who created this?
+
+SpliceKit was created by Brian Elliott Tate.
+
+It originally started as a [MCP server for CommandPost](https://github.com/CommandPost/CommandPost/pull/3514), and then grew into SpliceKit.
+
+It's now maintained by Brian and [Chris Hocking from LateNite](https://fcp.cafe/latenite/#chris-hocking), with awesome [contributions](https://github.com/elliotttate/SpliceKit/graphs/contributors) from the Final Cut Pro community.
+
+Brian and Chris have been in touch since around 2017, when Brian was working on some FxPlug2 effects.
+
+Jump forward to 2026 and now thanks to the power of LLMs, Brian has taken all the lessons learned from the last decade, and has taken CommandPost to the next level with SpliceKit.
+
+Like with CommandPost and FCP Cafe, the aim of SpliceKit is to be an open platform, where ANY video editor can contribute - and now with LLMs, you don't even need to know code to make an impact!

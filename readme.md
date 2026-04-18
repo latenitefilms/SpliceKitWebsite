@@ -88,47 +88,71 @@ Describe what you want. Hand the spec to Claude. It writes the plugin against th
 
 Every one of these is a plugin. They're bundled so you can use SpliceKit the day you install it, and they double as working examples for anyone building their own.
 
+---
+
 ### Text-Based Editor
 Transcribe every clip on your timeline with on-device speech recognition (NVIDIA Parakeet — 25 languages, no cloud, with speaker diarization). Click a word to jump there. Select a sentence, hit Delete, and the video gets cut to match. Drag words to reorder clips. Export as SRT or plain text.
 
 https://www.youtube.com/watch?v=JxxDSH4Ly0I
+
+---
 
 ### Audio Mixer
 Mix by **role**, not clip-by-clip. Drop a compressor, EQ, or reverb on your Dialogue bus and every clip tagged Dialogue inherits it — past, present, and future. Retag a clip's role and it instantly picks up the new bus's processing. Set volumes, solo, and mute per role from one panel.
 
 https://www.youtube.com/watch?v=k_HL35lXFOA
 
+---
+
 ### Sections
 A color-coded section bar above the timeline that shows the shape of your edit at a glance. Name sections, color them, jump between them in one click — perfect for long-form edits, podcasts, multi-chapter projects, or anywhere you want to see structure without scrubbing.
 
 https://www.youtube.com/watch?v=plirvqHe6o0
 
+---
+
 ### Silence Remover
 Point it at an interview or podcast recording and it finds and cuts every silent pause. Configurable threshold, minimum duration, and padding. Pure Apple-native AVFoundation + Accelerate under the hood.
+
+---
 
 ### Social Media Captions
 Generate word-by-word highlighted, animated captions in 13 built-in styles (Bold Pop, Neon Glow, Karaoke, Typewriter, Bounce, and more). Captions land directly on your timeline as editable Motion titles.
 
+---
+
 ### Scene Detection
 Finds every shot change in your footage using vImage histogram comparison. Add markers, blade the timeline, or both.
+
+---
 
 ### Beat Detection & Song Cut
 Pulls BPM, beats, bars, and song sections from any music file. Hand **Song Cut** a music track and a folder of footage and get back a beat-synced music video on your timeline, with selectable pacing (natural, medium, fast, aggressive) or custom step weights.
 
+---
+
 ### LiveCam
 A built-in webcam booth that records straight to your library or active timeline. Live preview with color adjustments, audio meter, and a subject-lift green-screen matte that works on people *and* objects (macOS 14+). Pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha channel.
+
+---
 
 ### URL Import
 Paste a YouTube, Vimeo, or Twitter link and pull it into your library as a real clip. Auto-discovers `yt-dlp` and `ffmpeg` from your shell PATH.
 
+---
+
 ### Batch Export
 One command, every clip on your timeline exports as its own file — all effects, color grades, and transitions baked in.
+
+---
 
 ### Native BRAW and VP9 Support
 Drop Blackmagic RAW (`.braw`) and VP9/WebM files straight onto your timeline — no transcoding, no wrappers, no third-party toolkit install. SpliceKit ships a BRAW RAW Processor and a VP9 decoder that plug into Final Cut Pro through Apple's MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode. A huge unlock for anyone cutting Blackmagic camera footage or pulling down WebM video from the web.
 
+---
+
 ### Dual Timelines, FlexMusic, Montage Maker, OpenTimelineIO exchange, Lua REPL, in-process debugger…
-…and more. Every one of them is code in `Sources/` you can read, fork, or gut for parts.
+…and more. Every one of them is code in [`Sources`](https://github.com/elliotttate/SpliceKit/tree/main/Sources) you can read, fork, or gut for parts.
 
 ---
 

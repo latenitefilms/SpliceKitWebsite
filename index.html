@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829867625964">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829868438952">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -44,11 +44,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="static/favicon.ico" />
-    <link href="resources/css/retype.css?v=4.5.3.829867625964" rel="stylesheet">
+    <link href="resources/css/retype.css?v=4.5.3.829868438952" rel="stylesheet">
 
-    <script data-cfasync="false" src="resources/js/config.js?v=4.5.3.829867625964" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="resources/js/config.js?v=4.5.3.829868438952" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="resources/js/lunr.js?v=4.5.3.829867625964" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="resources/js/lunr.js?v=4.5.3.829868438952" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -324,36 +324,48 @@
 <hr>
 <h2 id="example-plugins-what-ships-in-the-box">Example Plugins (What Ships in the Box)</h2>
 <p>Every one of these is a plugin. They&#x27;re bundled so you can use SpliceKit the day you install it, and they double as working examples for anyone building their own.</p>
+<hr>
 <h3 id="text-based-editor">Text-Based Editor</h3>
 <p>Transcribe every clip on your timeline with on-device speech recognition (NVIDIA Parakeet — 25 languages, no cloud, with speaker diarization). Click a word to jump there. Select a sentence, hit Delete, and the video gets cut to match. Drag words to reorder clips. Export as SRT or plain text.</p>
 <div class="aspect-video w-full rounded-lg overflow-hidden mb-6 shadow-lg dark:shadow-lg">
     <iframe src="https://www.youtube.com/embed/JxxDSH4Ly0I" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full"></iframe>
-</div><h3 id="audio-mixer">Audio Mixer</h3>
+</div><hr>
+<h3 id="audio-mixer">Audio Mixer</h3>
 <p>Mix by <strong>role</strong>, not clip-by-clip. Drop a compressor, EQ, or reverb on your Dialogue bus and every clip tagged Dialogue inherits it — past, present, and future. Retag a clip&#x27;s role and it instantly picks up the new bus&#x27;s processing. Set volumes, solo, and mute per role from one panel.</p>
 <div class="aspect-video w-full rounded-lg overflow-hidden mb-6 shadow-lg dark:shadow-lg">
     <iframe src="https://www.youtube.com/embed/k_HL35lXFOA" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full"></iframe>
-</div><h3 id="sections">Sections</h3>
+</div><hr>
+<h3 id="sections">Sections</h3>
 <p>A color-coded section bar above the timeline that shows the shape of your edit at a glance. Name sections, color them, jump between them in one click — perfect for long-form edits, podcasts, multi-chapter projects, or anywhere you want to see structure without scrubbing.</p>
 <div class="aspect-video w-full rounded-lg overflow-hidden mb-6 shadow-lg dark:shadow-lg">
     <iframe src="https://www.youtube.com/embed/plirvqHe6o0" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full"></iframe>
-</div><h3 id="silence-remover">Silence Remover</h3>
+</div><hr>
+<h3 id="silence-remover">Silence Remover</h3>
 <p>Point it at an interview or podcast recording and it finds and cuts every silent pause. Configurable threshold, minimum duration, and padding. Pure Apple-native AVFoundation + Accelerate under the hood.</p>
+<hr>
 <h3 id="social-media-captions">Social Media Captions</h3>
 <p>Generate word-by-word highlighted, animated captions in 13 built-in styles (Bold Pop, Neon Glow, Karaoke, Typewriter, Bounce, and more). Captions land directly on your timeline as editable Motion titles.</p>
+<hr>
 <h3 id="scene-detection">Scene Detection</h3>
 <p>Finds every shot change in your footage using vImage histogram comparison. Add markers, blade the timeline, or both.</p>
+<hr>
 <h3 id="beat-detection--song-cut">Beat Detection &amp; Song Cut</h3>
 <p>Pulls BPM, beats, bars, and song sections from any music file. Hand <strong>Song Cut</strong> a music track and a folder of footage and get back a beat-synced music video on your timeline, with selectable pacing (natural, medium, fast, aggressive) or custom step weights.</p>
+<hr>
 <h3 id="livecam">LiveCam</h3>
 <p>A built-in webcam booth that records straight to your library or active timeline. Live preview with color adjustments, audio meter, and a subject-lift green-screen matte that works on people <em>and</em> objects (macOS 14+). Pick &quot;Transparent&quot; as the green-screen color and LiveCam writes ProRes 4444 with a real alpha channel.</p>
+<hr>
 <h3 id="url-import">URL Import</h3>
 <p>Paste a YouTube, Vimeo, or Twitter link and pull it into your library as a real clip. Auto-discovers <code translate="no" v-pre>yt-dlp</code> and <code translate="no" v-pre>ffmpeg</code> from your shell PATH.</p>
+<hr>
 <h3 id="batch-export">Batch Export</h3>
 <p>One command, every clip on your timeline exports as its own file — all effects, color grades, and transitions baked in.</p>
+<hr>
 <h3 id="native-braw-and-vp9-support">Native BRAW and VP9 Support</h3>
 <p>Drop Blackmagic RAW (<code translate="no" v-pre>.braw</code>) and VP9/WebM files straight onto your timeline — no transcoding, no wrappers, no third-party toolkit install. SpliceKit ships a BRAW RAW Processor and a VP9 decoder that plug into Final Cut Pro through Apple&#x27;s MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode. A huge unlock for anyone cutting Blackmagic camera footage or pulling down WebM video from the web.</p>
+<hr>
 <h3 id="dual-timelines-flexmusic-montage-maker-opentimelineio-exchange-lua-repl-in-process-debugger">Dual Timelines, FlexMusic, Montage Maker, OpenTimelineIO exchange, Lua REPL, in-process debugger…</h3>
-<p>…and more. Every one of them is code in <code translate="no" v-pre>Sources/</code> you can read, fork, or gut for parts.</p>
+<p>…and more. Every one of them is code in <a href="https://github.com/elliotttate/SpliceKit/tree/main/Sources" class="outbound" target="_blank"><span><code translate="no" v-pre>Sources</code></span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> you can read, fork, or gut for parts.</p>
 <hr>
 <h2 id="is-it-safe">Is it safe?</h2>
 <p>Whilst powerful tools like <a href="https://commandpost.fcp.cafe" class="outbound" target="_blank"><span>CommandPost</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> have existed for over a decade, SpliceKit uses safe but powerful code injection to get inside Final Cut Pro, giving you <strong>complete control</strong>.</p>
