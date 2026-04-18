@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829785275246">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.829811057291">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.5.3.829785275246" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.5.3.829811057291" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.829785275246" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.829811057291" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.829785275246" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.829811057291" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -233,6 +233,26 @@
 
                 <!-- Page content  -->
 <h1 id="release-notes">Release Notes</h1>
+<h3 id="3204">3.2.04</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>18th April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F973;</span> New Features:</strong></p>
+<ul>
+<li><strong>LiveCam</strong> — native webcam booth that records direct to your Library or active timeline without leaving Final Cut Pro. Live preview with looks, color/exposure/contrast/saturation/temperature/sharpness/glow adjustments, audio meter, mirror, date/time stamp overlay, and Library / Timeline placement (Append, At Playhead, or Connected Above). Subject-lift green screen uses Visions <code translate="no" v-pre>VNGenerateForegroundInstanceMaskRequest</code> (macOS 14+) for a tight, edge-aware matte that works on people and objects, with a custom Metal pipeline that runs joint-bilateral edge refinement, signed choke, temporal smoothing, spill suppression, and light wrap every frame; falls back to person segmentation on macOS 12-13. Transparent recording — pick &quot;Transparent&quot; as the green-screen color and LiveCam writes ProRes 4444 with a real alpha plane via <code translate="no" v-pre>CIRenderDestination</code> + <code translate="no" v-pre>kVTCompressionPropertyKey_AlphaChannelMode</code>, so the clip drops onto your timeline ready to composite without an external keyer. Open via the LiveCam toolbar button, the Enhancements menu, the Command Palette, or <code translate="no" v-pre>liveCam.show</code> / <code translate="no" v-pre>open_livecam</code>. URL import now auto-discovers <code translate="no" v-pre>yt-dlp</code> and <code translate="no" v-pre>ffmpeg</code> from your login shell PATH and symlinks them into the SpliceKit tools dir at install time, so Homebrew installs work without <code translate="no" v-pre>make url-import-tools</code>. Also fixes scroll dead space in the Captions panel.</li>
+</ul>
+<hr>
+<h3 id="3203">3.2.03</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>18th April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F973;</span> New Features:</strong></p>
+<ul>
+<li><strong>URL import workflow</strong> — pull remote media straight into your library or timeline. Supports direct <code translate="no" v-pre>.mp4</code>/<code translate="no" v-pre>.mov</code>/<code translate="no" v-pre>.m4v</code>/<code translate="no" v-pre>.webm</code> links plus YouTube VOD URLs. Access via the Command Palette (<strong>Import URL to Library</strong> / <strong>Import URL to Timeline</strong>), Lua, or MCP (<code translate="no" v-pre>import_url</code>, <code translate="no" v-pre>import_url_status</code>, <code translate="no" v-pre>cancel_import_url</code>). Three placement modes: import-only, insert at playhead, append to end. Async downloads with live progress, cancellation, and a clear guard against live streams. Requires <code translate="no" v-pre>yt-dlp</code> and <code translate="no" v-pre>ffmpeg</code> on PATH — run <code translate="no" v-pre>brew install yt-dlp ffmpeg</code> and <code translate="no" v-pre>make url-import-tools</code> to wire them in. Thanks to @JT-Apps (#40).</li>
+</ul>
+<hr>
 <h3 id="3202">3.2.02</h3>
 <p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
 <ul>
