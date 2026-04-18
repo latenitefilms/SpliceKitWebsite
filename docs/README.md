@@ -135,7 +135,9 @@ Pulls BPM, beats, bars, and song sections from any music file. Hand **Song Cut**
 ---
 
 ### LiveCam
-A built-in webcam booth that records straight to your library or active timeline. Live preview with color adjustments, audio meter, and a subject-lift green-screen matte that works on people *and* objects (macOS 14+). Pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha channel.
+A built-in webcam booth that records straight to your library or active timeline. Live preview with color adjustments, audio meter, and a subject-lift green-screen matte that works on people *and* objects (macOS 14+).
+
+Pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha channel.
 
 ---
 
@@ -149,8 +151,12 @@ One command, every clip on your timeline exports as its own file — all effects
 
 ---
 
-### Native BRAW and VP9 Support
-Drop Blackmagic RAW (`.braw`) and VP9/WebM files straight onto your timeline — no transcoding, no wrappers, no third-party toolkit install. SpliceKit ships a BRAW RAW Processor and a VP9 decoder that plug into Final Cut Pro through Apple's MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode. A huge unlock for anyone cutting Blackmagic camera footage or pulling down WebM video from the web.
+### Native Codecs
+Drop Blackmagic RAW (`.braw`) and VP9/WebM files straight onto your timeline — no transcoding, no wrappers, no third-party toolkit install.
+
+SpliceKit ships a BRAW RAW Processor and a VP9 decoder that plug into Final Cut Pro through Apple's MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode.
+
+A huge unlock for anyone cutting Blackmagic camera footage or pulling down WebM video from the web.
 
 ---
 
@@ -183,4 +189,4 @@ SpliceKit is **free and open-source**, and we encourage you to [contribute](/con
 
 The best place to chat about SliceKit is the [FCP Cafe Discord](https://ltnt.tv/discord).
 
-Welcome to a new world for Final Cut Pro users... 🥳
+**Welcome to a new world for Final Cut Pro users... 🥳**
