@@ -1,13 +1,34 @@
 # Release Notes
 
+### 3.2.05
+
+**🎉 Released:**
+- 19th April 2026
+
+**🥳 New Features:**
+- **MKV / WebM imports** — drop `.mkv` or `.webm` files onto Final Cut and SpliceKit generates a shadow `MP4` remux on the fly so Final Cut Pro sees a native container while the original file stays untouched on disk. Highest Quality toggle for URL imports — new checkbox in the Import URL dialog fetches the highest available resolution from YouTube / Vimeo (1080p, 1440p, or 4K via `VP9` / `AV1`) instead of YouTube's 720p progressive-mp4 cap; leave it off for the fast path.
+
+**🔨 Improvements**
+- **URL import reliability** — fixes an FCPXML parse failure when downloaded filenames contain ampersands or other XML-reserved characters (e.g. 'PS5 & PS5 Pro'), replaces the misleading twin-percent progress HUD with a single smooth readout, and vertically aligns the spinner with its label.
+- **Share Logs** — one-click upload of the latest Final Cut Pro crash log plus SpliceKit logs to filebin.net, added to the Patcher status panel.
+- LiveCam mask kernel dispatch and shader-coordinate fix resolves subject-lift / green-screen edge artifacts on some machines.
+- BRAW settings inspector locks to dark appearance to match FCP's other inspectors.
+- Points the bundled `.mcp.json` at the `mcp-setup venv` interpreter so Claude Desktop MCP works without hand-editing Python paths.
+
+---
+
 ### 3.2.04
 
 **🎉 Released:**
 - 18th April 2026
 
 **🥳 New Features:**
+- **LiveCam** — native webcam booth that records direct to your Library or active timeline without leaving Final Cut Pro. Live preview with looks, color/exposure/contrast/saturation/temperature/sharpness/glow adjustments, audio meter, mirror, date/time stamp overlay, and Library / Timeline placement (Append, At Playhead, or Connected Above). Subject-lift green screen uses Visions `VNGenerateForegroundInstanceMaskRequest` (macOS 14+) for a tight, edge-aware matte that works on people and objects, with a custom Metal pipeline that runs joint-bilateral edge refinement, signed choke, temporal smoothing, spill suppression, and light wrap every frame; falls back to person segmentation on macOS 12-13.
+- **Transparent recording** — pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha plane via `CIRenderDestination` + `kVTCompressionPropertyKey_AlphaChannelMode`, so the clip drops onto your timeline ready to composite without an external keyer. Open via the LiveCam toolbar button, the Enhancements menu, the Command Palette, or `liveCam.show` / `open_livecam`.
 
-- **LiveCam** — native webcam booth that records direct to your Library or active timeline without leaving Final Cut Pro. Live preview with looks, color/exposure/contrast/saturation/temperature/sharpness/glow adjustments, audio meter, mirror, date/time stamp overlay, and Library / Timeline placement (Append, At Playhead, or Connected Above). Subject-lift green screen uses Visions `VNGenerateForegroundInstanceMaskRequest` (macOS 14+) for a tight, edge-aware matte that works on people and objects, with a custom Metal pipeline that runs joint-bilateral edge refinement, signed choke, temporal smoothing, spill suppression, and light wrap every frame; falls back to person segmentation on macOS 12-13. Transparent recording — pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha plane via `CIRenderDestination` + `kVTCompressionPropertyKey_AlphaChannelMode`, so the clip drops onto your timeline ready to composite without an external keyer. Open via the LiveCam toolbar button, the Enhancements menu, the Command Palette, or `liveCam.show` / `open_livecam`. URL import now auto-discovers `yt-dlp` and `ffmpeg` from your login shell PATH and symlinks them into the SpliceKit tools dir at install time, so Homebrew installs work without `make url-import-tools`. Also fixes scroll dead space in the Captions panel.
+**🔨 Improvements**
+- URL import now auto-discovers `yt-dlp` and `ffmpeg` from your login shell PATH and symlinks them into the SpliceKit tools dir at install time, so Homebrew installs work without `make url-import-tools`.
+- Fixes scroll dead space in the Captions panel.
 
 ---
 
