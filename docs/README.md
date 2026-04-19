@@ -30,7 +30,9 @@ https://www.youtube.com/watch?v=Q4GjHmmUISw
 - *"remove all the silences"*
 - *"add a cross dissolve"*
 
-> No more menu hunting. No more memorizing shortcuts. No cloud.
+!!!tip
+No more menu hunting. No more memorizing shortcuts. No cloud.
+!!!
 
 ---
 
@@ -58,8 +60,9 @@ When that happens, don't settle for the workaround. **Tell it to build the abili
 | **2. Build** | You say "make this a real command." Claude writes a plugin, registers a new MCP tool, and wires it into your editor. |
 | **3. Reuse** | Next time — or the hundredth time after that — it's instant, reliable, and shared with everyone running the same plugin. |
 
-> Every clumsy first attempt is a prompt to turn that workflow into a first-class feature. The editor you use six months from now is smarter than the one you installed today — and most of that improvement won't come from the SpliceKit team. It'll come from you, and from the community shipping plugins back.
-
+!!!tip
+Every clumsy first attempt is a prompt to turn that workflow into a first-class feature. The editor you use six months from now is smarter than the one you installed today — and most of that improvement won't come from the SpliceKit team. It'll come from you, and from the community shipping plugins back.
+!!!
 
 ---
 
