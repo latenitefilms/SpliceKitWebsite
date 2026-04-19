@@ -1,5 +1,32 @@
 # Release Notes
 
+### 3.2.07
+
+**🎉 Released:**
+- 19th April 2026
+
+**🔨 Improvements**
+- HEVC MP4s tagged hev1 (Dolby Vision, DV.HDR10+ WEB-DLs, and other tool-transcoded HEVC material) now import into Final Cut.
+- Previously those files showed up as unimportable because AVFoundation / QuickTime / Final Cut only decode HEVC muxed with the hvc1 sample-entry tag.
+- SpliceKit now detects hev1 at import time and retags the file using an APFS clonefile() COW snapshot plus a 2-byte edit to the moov box — no stream-copy remux required, no extra disk space consumed, a few seconds even on 19 GB files. The original file on disk is untouched; only the clone is modified.
+
+---
+
+### 3.2.06
+
+**🎉 Released:**
+- 19th April 2026
+
+**🔨 Improvements**
+- Shadow-remux now handles h264, hevc, av1, and prores Matroska sources (previously VP9/VP8 only), with audio transcoded to AAC when the source codec can't go into MP4.
+- HEVC gets the hvc1 sample-entry tag so Final Cut actually decodes Main-10 MKVs.
+- Subtitle and attachment tracks are dropped from the mux.
+- B-frame-safe CFR timestamp rewrite preserves h264/hevc/av1 display order.
+- Media Import 'Processing files for import...' no longer stalls on folders with unrelated files — the hook short-circuits non-Matroska extensions and uses a deterministic shadow path so the same source is never remuxed twice.
+- Menu renamed from Enhancements to Splices; Debug dropdown hidden from the menu bar.
+
+---
+
 ### 3.2.05
 
 **🎉 Released:**
