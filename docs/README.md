@@ -4,6 +4,10 @@
 
 > [:icon-desktop-download: Download SpliceKit for free](/download/)
 
+![](/static/banner-logo.png)
+
+---
+
 | 🎹 Command Palette | 🤖 MCP Server | 🧩 Plugin Framework |
 |---|---|---|
 | Hit `COMMAND+SHIFT+P` and type what you want. Apple Intelligence runs it. | Any LLM can read and edit your timeline — and build new tools as it goes. | Every built-in feature is just an example plugin. You (or an AI) can ship more. |
