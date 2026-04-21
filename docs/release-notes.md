@@ -1,5 +1,18 @@
 # Release Notes
 
+### 3.3.1
+
+**🎉 Released:**
+- 21st April 2026
+
+**🔨 Improvements**
+- Adds a Vision Pro preview panel, Bonjour discovery for `_ivtpreviewclient._tcp`, MCP bridge additions for the Vision Pro tools, and the Resolve Immersive BRAW reverse-engineering notes.
+
+**🐞 Bug Fixes:**
+- Fixes crash-on-launch regression in `v3.3.0`. The SpliceKitBridgeMetadata module had its declaration and call site committed but its implementation file was never included in the build, so the safe-install block jumped to `0x0` during Final Cut Pro's `didFinishLaunching` fanout.
+
+---
+
 ### 3.3.0
 
 **🎉 Released:**
