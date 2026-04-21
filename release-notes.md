@@ -1,5 +1,18 @@
 # Release Notes
 
+### 3.3.2
+
+**🎉 Released:**
+- 21st April 2026
+
+**🐞 Bug Fixes:**
+- Fixes Blackmagic RAW thumbnail crash when third-party Media Extensions are installed.
+- Restores LiveCam camera/microphone access.
+- Fixes rare installer signing failures from stray extended attributes.
+- Adds build-time guards against undefined `SpliceKit_` symbols.
+
+---
+
 ### 3.3.1
 
 **🎉 Released:**
