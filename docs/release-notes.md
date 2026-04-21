@@ -1,5 +1,19 @@
 # Release Notes
 
+### 3.3.0
+
+**🎉 Released:**
+- 21st April 2026
+
+**🔨 Improvements**
+- New icon by the amazing [Matthew Skiles](http://matthewskiles.com). 🥳
+- Wider Wizard layout so the update buttons fit correctly when updating.
+- **Launch Final Cut Pro** button improvements. Thanks for reporting Jonny!
+- Help button now opens the website.
+- Switched Sparkle from a vendored framework to Swift Package Manager for easier updating.
+
+---
+
 ### 3.2.07
 
 **🎉 Released:**
