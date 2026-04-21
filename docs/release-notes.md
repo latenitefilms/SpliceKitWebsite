@@ -18,7 +18,7 @@
 **🎉 Released:**
 - 21st April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Adds a Vision Pro preview panel, Bonjour discovery for `_ivtpreviewclient._tcp`, MCP bridge additions for the Vision Pro tools, and the Resolve Immersive BRAW reverse-engineering notes.
 
 **🐞 Bug Fixes:**
@@ -31,7 +31,7 @@
 **🎉 Released:**
 - 21st April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - New icon by the amazing [Matthew Skiles](http://matthewskiles.com). 🥳
 - Wider Wizard layout so the update buttons fit correctly when updating.
 - **Launch Final Cut Pro** button improvements. Thanks for reporting Jonny!
@@ -45,7 +45,7 @@
 **🎉 Released:**
 - 19th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - HEVC MP4s tagged hev1 (Dolby Vision, DV.HDR10+ WEB-DLs, and other tool-transcoded HEVC material) now import into Final Cut.
 - Previously those files showed up as unimportable because AVFoundation / QuickTime / Final Cut only decode HEVC muxed with the hvc1 sample-entry tag.
 - SpliceKit now detects hev1 at import time and retags the file using an APFS clonefile() COW snapshot plus a 2-byte edit to the moov box — no stream-copy remux required, no extra disk space consumed, a few seconds even on 19 GB files. The original file on disk is untouched; only the clone is modified.
@@ -57,7 +57,7 @@
 **🎉 Released:**
 - 19th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Shadow-remux now handles h264, hevc, av1, and prores Matroska sources (previously VP9/VP8 only), with audio transcoded to AAC when the source codec can't go into MP4.
 - HEVC gets the hvc1 sample-entry tag so Final Cut actually decodes Main-10 MKVs.
 - Subtitle and attachment tracks are dropped from the mux.
@@ -75,7 +75,7 @@
 **🥳 New Features:**
 - **MKV / WebM imports** — drop `.mkv` or `.webm` files onto Final Cut and SpliceKit generates a shadow `MP4` remux on the fly so Final Cut Pro sees a native container while the original file stays untouched on disk. Highest Quality toggle for URL imports — new checkbox in the Import URL dialog fetches the highest available resolution from YouTube / Vimeo (1080p, 1440p, or 4K via `VP9` / `AV1`) instead of YouTube's 720p progressive-mp4 cap; leave it off for the fast path.
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - **URL import reliability** — fixes an FCPXML parse failure when downloaded filenames contain ampersands or other XML-reserved characters (e.g. 'PS5 & PS5 Pro'), replaces the misleading twin-percent progress HUD with a single smooth readout, and vertically aligns the spinner with its label.
 - **Share Logs** — one-click upload of the latest Final Cut Pro crash log plus SpliceKit logs to filebin.net, added to the Patcher status panel.
 - LiveCam mask kernel dispatch and shader-coordinate fix resolves subject-lift / green-screen edge artifacts on some machines.
@@ -93,7 +93,7 @@
 - **LiveCam** — native webcam booth that records direct to your Library or active timeline without leaving Final Cut Pro. Live preview with looks, color/exposure/contrast/saturation/temperature/sharpness/glow adjustments, audio meter, mirror, date/time stamp overlay, and Library / Timeline placement (Append, At Playhead, or Connected Above). Subject-lift green screen uses Visions `VNGenerateForegroundInstanceMaskRequest` (macOS 14+) for a tight, edge-aware matte that works on people and objects, with a custom Metal pipeline that runs joint-bilateral edge refinement, signed choke, temporal smoothing, spill suppression, and light wrap every frame; falls back to person segmentation on macOS 12-13.
 - **Transparent recording** — pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha plane via `CIRenderDestination` + `kVTCompressionPropertyKey_AlphaChannelMode`, so the clip drops onto your timeline ready to composite without an external keyer. Open via the LiveCam toolbar button, the Enhancements menu, the Command Palette, or `liveCam.show` / `open_livecam`.
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - URL import now auto-discovers `yt-dlp` and `ffmpeg` from your login shell PATH and symlinks them into the SpliceKit tools dir at install time, so Homebrew installs work without `make url-import-tools`.
 - Fixes scroll dead space in the Captions panel.
 
@@ -164,7 +164,7 @@
 **🎉 Released:**
 - 16th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Automatically expose Apple's AUSoundIsolation effect on startup so Voice Isolation stays available in the audio effects browser across launches.
 
 ---
@@ -194,7 +194,7 @@
 **🎉 Released:**
 - 16th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Audio Mixer: managed role-bus effects, solo/mute controls, FX menu, state mirroring, diagnostics.
 
 ---
@@ -204,7 +204,7 @@
 **🎉 Released:**
 - 16th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Transcript Editor diagnostics, timestamp mapping fixes, speaker cleanup, and faster pause deletion.
 
 ---
@@ -214,7 +214,7 @@
 **🎉 Released:**
 - 15th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Add song cut workflow for beat-synced video assembly from sequence-backed sources. Fix cumulative frame drift in FCPXML builds, fix connected song alignment, add half-beat pairing rule, add sequence name substring matching, resolve timeline clips to browser equivalents for native insertion.
 
 ---
@@ -264,7 +264,7 @@
 **🎉 Released:**
 - 14th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Live audio metering in mixer panel, Final Cut Pro role colors, keyframed volume support.
 
 ---
@@ -329,7 +329,7 @@
 **🎉 Released:**
 - 12th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Sections bar for timeline song structure, add default transition to all clips command, fuzzy search stop-word handling. Watch [video[(https://youtu.be/plirvqHe6o0).
 
 ---
@@ -339,7 +339,7 @@
 **🎉 Released:**
 - 10th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Dual timeline workflow updates, cross-window drag and copy, secondary window controls, and browser sizing/layout fixes.
 
 ---
@@ -349,7 +349,7 @@
 **🎉 Released:**
 - 10th April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Improves patcher update detection and rebuild/update flows, fixes bundled Parakeet packaging for updates, and reduces patched-app signing friction by removing unnecessary debug entitlements.
 
 ---
@@ -359,7 +359,7 @@
 **🎉 Released:**
 - 8 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Improves social caption insertion and relaunch restore. Fixes title placeholder recovery on restart, preserves caption placement on reload, and tightens word highlighting behavior.
 
 ---
@@ -414,7 +414,7 @@
 **🎉 Released:**
 - 7 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added local App Store receipt validation for Creator Studio subscriptions before launch.
 - Shows an alert when no valid subscription is found.
 
@@ -436,7 +436,7 @@
 **🎉 Released:**
 - 6 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added configurable J/L playback speed ladders instead of Final Cut Pro’s fixed shuttle progression.
 - Added menu and API controls for custom playback ladders.
 - Added MCP playback speed controls and current-rate reporting.
@@ -449,7 +449,7 @@
 **🎉 Released:**
 - 6 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Improved Final Cut Pro discovery so SpliceKit can find non-standard app locations automatically.
 - Added a manual “Browse for Final Cut Pro...” fallback.
 
@@ -464,7 +464,7 @@
 **🎉 Released:**
 - 5 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Bundled the pre-built `parakeet-transcriber` in the DMG for easier setup.
 - Improved Parakeet error messages and skipped clips shorter than 0.5s.
 - Deployed helper tools into the SpliceKit tools folder during deployment and added more detailed logging.
@@ -479,7 +479,7 @@
 **🎉 Released:**
 - 5 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Rebranded FCPBridge as **SpliceKit**.
 - Introduced a new wizard-style patcher app, DMG distribution, and app icon.
 - Renamed the Final Cut Pro menu item to **Enhancements**.
@@ -493,7 +493,7 @@
 **🎉 Released:**
 - 4 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added effect browser favorites support through Final Cut Pro’s built-in favorites API.
 - Exposed Final Cut Pro internal debug and diagnostics tools through MCP presets.
 - Fixed patcher signing to preserve Apple framework signatures.
@@ -508,7 +508,7 @@
 **🎉 Released:**
 - 2 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added effect dragging to empty timeline space to create named adjustment clips.
 - Included a toggle for this behavior in the FCPBridge menu.
 
@@ -519,7 +519,7 @@
 **🎉 Released:**
 - 2 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added support for Final Cut Pro Creator Studio with auto-detection and an edition picker.
 - Added adjustment clip creation when dragging effects into empty timeline space.
 
@@ -530,7 +530,7 @@
 **🎉 Released:**
 - 2 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Improved Parakeet error messages with download progress and network, disk, memory, and Xcode CLT diagnostics.
 - Expanded the command palette to 120+ entries.
 
@@ -541,7 +541,7 @@
 **🎉 Released:**
 - 2 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added full MCP control with universal menu access and dialog handling.
 - Added effect parameter read/write support for opacity, transform, crop, and volume.
 - Expanded timeline actions to 200+ operations.
@@ -554,7 +554,7 @@
 **🎉 Released:**
 - 2 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added batch export to export timeline clips individually to a folder with one initial destination prompt.
 - Added `batch_export()` and `set_timeline_range()` MCP tools.
 - Added absolute `startTime` and `endTime` positions for timeline clips.
@@ -567,7 +567,7 @@
 **🎉 Released:**
 - 1 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Fixed Parakeet in the release patcher by embedding transcriber source in the patcher app bundle.
 - Added handling for read-only app bundles by copying sources to a writable temp directory before building.
 
@@ -578,7 +578,7 @@
 **🎉 Released:**
 - 1 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Made Parakeet v3 Multilingual the default transcription engine, with Parakeet v2 still available.
 - Added batch transcription with shared model loading, source deduplication, and concurrent diarization.
 - Fixed installation issues caused by hardcoded paths and improved binary deployment.
@@ -591,7 +591,7 @@
 **🎉 Released:**
 - 1 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added Sparkle auto-update support to the patcher.
 - Fixed “Browse Titles...” so titles insert correctly as connected clips.
 - Made NVIDIA Parakeet the default transcription engine.
@@ -604,7 +604,7 @@
 **🎉 Released:**
 - 1 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added NVIDIA Parakeet transcription as the default engine.
 - Added speaker diarization for Parakeet and Apple Speech.
 - Added speaker renaming in the transcript UI.
@@ -617,7 +617,7 @@
 **🎉 Released:**
 - 1 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added a VS Code-style command palette inside Final Cut Pro.
 - Added Apple Intelligence integration for natural-language editing commands.
 - Added silence detection and removal using Apple-native audio analysis.
@@ -631,7 +631,7 @@
 **🎉 Released:**
 - 1 April 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Fixed live playhead sync for transcript highlighting during playback.
 - Moved patcher shell commands off the main thread to prevent beachballing.
 - Removed the git dependency by switching downloads to `curl`.
@@ -644,7 +644,7 @@
 **🎉 Released:**
 - 31 March 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Added a transcript editor for text-based video editing inside Final Cut Pro.
 - Added word-level transcription, click-to-seek, delete-to-ripple-delete, and drag-to-reorder.
 - Added toolbar, menu bar, and keyboard shortcut integration.
@@ -658,7 +658,7 @@
 **🎉 Released:**
 - 31 March 2026
 
-**🔨 Improvements**
+**🔨 Improvements:**
 - Introduced **FCPBridge 2.0.0** with direct programmatic control of Final Cut Pro via injected dylib and MCP server.
 - Added 28 MCP tools, 40+ timeline actions, JSON-RPC access, object handles, KVC property access, and FCPXML generation/import.
 - Added patcher app support for copying, injecting, re-signing, and launching a modded Final Cut Pro build.
