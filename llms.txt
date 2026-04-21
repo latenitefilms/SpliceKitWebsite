@@ -20,6 +20,6 @@
 - [Audio Mixer](https://splicekit.fcp.cafe/features/audio-mixer.md): Mix by role, not clip-by-clip. Drop a compressor, EQ, or reverb on your Dialogue bus and every clip tagged Dialogue inherits it — past, present, and future.
 - [Command Palette](https://splicekit.fcp.cafe/features/command-palette.md): One keystroke to anything.
 - [MCP Server](https://splicekit.fcp.cafe/features/mcp-server.md): First, create a Python virtual environment for the MCP server and install the mcp package:
-- [Native BRAW and VP9 Support](https://splicekit.fcp.cafe/features/codec-support.md): Drop Blackmagic RAW (.braw) and VP9/WebM files straight onto your timeline — no transcoding, no wrappers, no third-party toolkit install.
+- [Native BRAW and VP9 Support](https://splicekit.fcp.cafe/features/codec-support.md): To enable Blackmagic RAW support in SpliceKit you need to have a legitimate paid version of LateNite's BRAW Toolbox installed.
 - [Sections](https://splicekit.fcp.cafe/features/sections.md): Sections bar for timeline song structure, add default transition to all clips command, fuzzy search stop-word handling.
 - [Transcript Editor](https://splicekit.fcp.cafe/features/transcript-editor.md): The Transcript Editor brings Text-Based Video Editing to Final Cut Pro:
