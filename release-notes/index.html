@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.830091886162">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.830092086133">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.5.3.830091886162" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.5.3.830092086133" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.830091886162" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.830092086133" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.830091886162" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.830092086133" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -251,7 +251,7 @@
 <ul>
 <li>21st April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Adds a Vision Pro preview panel, Bonjour discovery for <code translate="no" v-pre>_ivtpreviewclient._tcp</code>, MCP bridge additions for the Vision Pro tools, and the Resolve Immersive BRAW reverse-engineering notes.</li>
 </ul>
@@ -265,7 +265,7 @@
 <ul>
 <li>21st April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>New icon by the amazing <a href="http://matthewskiles.com" class="outbound" target="_blank"><span>Matthew Skiles</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. <span class="docs-emoji">&#x1F973;</span></li>
 <li>Wider Wizard layout so the update buttons fit correctly when updating.</li>
@@ -279,7 +279,7 @@
 <ul>
 <li>19th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>HEVC MP4s tagged hev1 (Dolby Vision, DV.HDR10+ WEB-DLs, and other tool-transcoded HEVC material) now import into Final Cut.</li>
 <li>Previously those files showed up as unimportable because AVFoundation / QuickTime / Final Cut only decode HEVC muxed with the hvc1 sample-entry tag.</li>
@@ -291,7 +291,7 @@
 <ul>
 <li>19th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Shadow-remux now handles h264, hevc, av1, and prores Matroska sources (previously VP9/VP8 only), with audio transcoded to AAC when the source codec can&#x27;t go into MP4.</li>
 <li>HEVC gets the hvc1 sample-entry tag so Final Cut actually decodes Main-10 MKVs.</li>
@@ -310,7 +310,7 @@
 <ul>
 <li><strong>MKV / WebM imports</strong> — drop <code translate="no" v-pre>.mkv</code> or <code translate="no" v-pre>.webm</code> files onto Final Cut and SpliceKit generates a shadow <code translate="no" v-pre>MP4</code> remux on the fly so Final Cut Pro sees a native container while the original file stays untouched on disk. Highest Quality toggle for URL imports — new checkbox in the Import URL dialog fetches the highest available resolution from YouTube / Vimeo (1080p, 1440p, or 4K via <code translate="no" v-pre>VP9</code> / <code translate="no" v-pre>AV1</code>) instead of YouTube&#x27;s 720p progressive-mp4 cap; leave it off for the fast path.</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li><strong>URL import reliability</strong> — fixes an FCPXML parse failure when downloaded filenames contain ampersands or other XML-reserved characters (e.g. &#x27;PS5 &amp; PS5 Pro&#x27;), replaces the misleading twin-percent progress HUD with a single smooth readout, and vertically aligns the spinner with its label.</li>
 <li><strong>Share Logs</strong> — one-click upload of the latest Final Cut Pro crash log plus SpliceKit logs to filebin.net, added to the Patcher status panel.</li>
@@ -329,7 +329,7 @@
 <li><strong>LiveCam</strong> — native webcam booth that records direct to your Library or active timeline without leaving Final Cut Pro. Live preview with looks, color/exposure/contrast/saturation/temperature/sharpness/glow adjustments, audio meter, mirror, date/time stamp overlay, and Library / Timeline placement (Append, At Playhead, or Connected Above). Subject-lift green screen uses Visions <code translate="no" v-pre>VNGenerateForegroundInstanceMaskRequest</code> (macOS 14+) for a tight, edge-aware matte that works on people and objects, with a custom Metal pipeline that runs joint-bilateral edge refinement, signed choke, temporal smoothing, spill suppression, and light wrap every frame; falls back to person segmentation on macOS 12-13.</li>
 <li><strong>Transparent recording</strong> — pick &quot;Transparent&quot; as the green-screen color and LiveCam writes ProRes 4444 with a real alpha plane via <code translate="no" v-pre>CIRenderDestination</code> + <code translate="no" v-pre>kVTCompressionPropertyKey_AlphaChannelMode</code>, so the clip drops onto your timeline ready to composite without an external keyer. Open via the LiveCam toolbar button, the Enhancements menu, the Command Palette, or <code translate="no" v-pre>liveCam.show</code> / <code translate="no" v-pre>open_livecam</code>.</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>URL import now auto-discovers <code translate="no" v-pre>yt-dlp</code> and <code translate="no" v-pre>ffmpeg</code> from your login shell PATH and symlinks them into the SpliceKit tools dir at install time, so Homebrew installs work without <code translate="no" v-pre>make url-import-tools</code>.</li>
 <li>Fixes scroll dead space in the Captions panel.</li>
@@ -400,7 +400,7 @@
 <ul>
 <li>16th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Automatically expose Apple&#x27;s AUSoundIsolation effect on startup so Voice Isolation stays available in the audio effects browser across launches.</li>
 </ul>
@@ -430,7 +430,7 @@
 <ul>
 <li>16th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Audio Mixer: managed role-bus effects, solo/mute controls, FX menu, state mirroring, diagnostics.</li>
 </ul>
@@ -440,7 +440,7 @@
 <ul>
 <li>16th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Transcript Editor diagnostics, timestamp mapping fixes, speaker cleanup, and faster pause deletion.</li>
 </ul>
@@ -450,7 +450,7 @@
 <ul>
 <li>15th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Add song cut workflow for beat-synced video assembly from sequence-backed sources. Fix cumulative frame drift in FCPXML builds, fix connected song alignment, add half-beat pairing rule, add sequence name substring matching, resolve timeline clips to browser equivalents for native insertion.</li>
 </ul>
@@ -500,7 +500,7 @@
 <ul>
 <li>14th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Live audio metering in mixer panel, Final Cut Pro role colors, keyframed volume support.</li>
 </ul>
@@ -567,7 +567,7 @@
 <ul>
 <li>12th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Sections bar for timeline song structure, add default transition to all clips command, fuzzy search stop-word handling. Watch [video[(https://youtu.be/plirvqHe6o0).</li>
 </ul>
@@ -577,7 +577,7 @@
 <ul>
 <li>10th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Dual timeline workflow updates, cross-window drag and copy, secondary window controls, and browser sizing/layout fixes.</li>
 </ul>
@@ -587,7 +587,7 @@
 <ul>
 <li>10th April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Improves patcher update detection and rebuild/update flows, fixes bundled Parakeet packaging for updates, and reduces patched-app signing friction by removing unnecessary debug entitlements.</li>
 </ul>
@@ -597,7 +597,7 @@
 <ul>
 <li>8 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Improves social caption insertion and relaunch restore. Fixes title placeholder recovery on restart, preserves caption placement on reload, and tightens word highlighting behavior.</li>
 </ul>
@@ -657,7 +657,7 @@
 <ul>
 <li>7 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added local App Store receipt validation for Creator Studio subscriptions before launch.</li>
 <li>Shows an alert when no valid subscription is found.</li>
@@ -679,7 +679,7 @@
 <ul>
 <li>6 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added configurable J/L playback speed ladders instead of Final Cut Pro’s fixed shuttle progression.</li>
 <li>Added menu and API controls for custom playback ladders.</li>
@@ -692,7 +692,7 @@
 <ul>
 <li>6 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Improved Final Cut Pro discovery so SpliceKit can find non-standard app locations automatically.</li>
 <li>Added a manual “Browse for Final Cut Pro...” fallback.</li>
@@ -708,7 +708,7 @@
 <ul>
 <li>5 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Bundled the pre-built <code translate="no" v-pre>parakeet-transcriber</code> in the DMG for easier setup.</li>
 <li>Improved Parakeet error messages and skipped clips shorter than 0.5s.</li>
@@ -724,7 +724,7 @@
 <ul>
 <li>5 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Rebranded FCPBridge as <strong>SpliceKit</strong>.</li>
 <li>Introduced a new wizard-style patcher app, DMG distribution, and app icon.</li>
@@ -738,7 +738,7 @@
 <ul>
 <li>4 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added effect browser favorites support through Final Cut Pro’s built-in favorites API.</li>
 <li>Exposed Final Cut Pro internal debug and diagnostics tools through MCP presets.</li>
@@ -752,7 +752,7 @@
 <ul>
 <li>2 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added effect dragging to empty timeline space to create named adjustment clips.</li>
 <li>Included a toggle for this behavior in the FCPBridge menu.</li>
@@ -763,7 +763,7 @@
 <ul>
 <li>2 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added support for Final Cut Pro Creator Studio with auto-detection and an edition picker.</li>
 <li>Added adjustment clip creation when dragging effects into empty timeline space.</li>
@@ -774,7 +774,7 @@
 <ul>
 <li>2 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Improved Parakeet error messages with download progress and network, disk, memory, and Xcode CLT diagnostics.</li>
 <li>Expanded the command palette to 120+ entries.</li>
@@ -785,7 +785,7 @@
 <ul>
 <li>2 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added full MCP control with universal menu access and dialog handling.</li>
 <li>Added effect parameter read/write support for opacity, transform, crop, and volume.</li>
@@ -798,7 +798,7 @@
 <ul>
 <li>2 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added batch export to export timeline clips individually to a folder with one initial destination prompt.</li>
 <li>Added <code translate="no" v-pre>batch_export()</code> and <code translate="no" v-pre>set_timeline_range()</code> MCP tools.</li>
@@ -811,7 +811,7 @@
 <ul>
 <li>1 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Fixed Parakeet in the release patcher by embedding transcriber source in the patcher app bundle.</li>
 <li>Added handling for read-only app bundles by copying sources to a writable temp directory before building.</li>
@@ -822,7 +822,7 @@
 <ul>
 <li>1 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Made Parakeet v3 Multilingual the default transcription engine, with Parakeet v2 still available.</li>
 <li>Added batch transcription with shared model loading, source deduplication, and concurrent diarization.</li>
@@ -835,7 +835,7 @@
 <ul>
 <li>1 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added Sparkle auto-update support to the patcher.</li>
 <li>Fixed “Browse Titles...” so titles insert correctly as connected clips.</li>
@@ -848,7 +848,7 @@
 <ul>
 <li>1 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added NVIDIA Parakeet transcription as the default engine.</li>
 <li>Added speaker diarization for Parakeet and Apple Speech.</li>
@@ -861,7 +861,7 @@
 <ul>
 <li>1 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added a VS Code-style command palette inside Final Cut Pro.</li>
 <li>Added Apple Intelligence integration for natural-language editing commands.</li>
@@ -875,7 +875,7 @@
 <ul>
 <li>1 April 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Fixed live playhead sync for transcript highlighting during playback.</li>
 <li>Moved patcher shell commands off the main thread to prevent beachballing.</li>
@@ -888,7 +888,7 @@
 <ul>
 <li>31 March 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Added a transcript editor for text-based video editing inside Final Cut Pro.</li>
 <li>Added word-level transcription, click-to-seek, delete-to-ripple-delete, and drag-to-reorder.</li>
@@ -902,7 +902,7 @@
 <ul>
 <li>31 March 2026</li>
 </ul>
-<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements</strong></p>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
 <ul>
 <li>Introduced <strong>FCPBridge 2.0.0</strong> with direct programmatic control of Final Cut Pro via injected dylib and MCP server.</li>
 <li>Added 28 MCP tools, 40+ timeline actions, JSON-RPC access, object handles, KVC property access, and FCPXML generation/import.</li>
