@@ -3,7 +3,7 @@
 **Final Cut Pro, unlocked. A Command Palette, MCP server, and an open plugin framework to do almost anything.**
 
 !!!success
-:icon-desktop-download: [Download](/download) SpliceKit for free now!
+[Download](/download) SpliceKit for free today! :icon-desktop-download:
 !!!
 
 ![](/static/banner-logo.png)
