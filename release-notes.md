@@ -1,5 +1,15 @@
 # Release Notes
 
+### 3.3.3
+
+**🎉 Released:**
+- 23rd April 2026
+
+**🐞 Bug Fixes:**
+- Fixes the patcher signing path for existing modded installs so nested SpliceKit bundles, framework, and app wrapper are re-signed correctly during rebuilds and updates.
+
+---
+
 ### 3.3.2
 
 **🎉 Released:**
