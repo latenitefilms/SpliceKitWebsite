@@ -1,11 +1,23 @@
 # Release Notes
 
-### 3.3.3
+### 3.3.4
 
 **🎉 Released:**
 - 23rd April 2026
 
 **🐞 Bug Fixes:**
+- Fixes the patcher update path on existing modded installs by rebuilding SpliceKit.
+- Framework cleaned before signing, avoiding recursive framework symlink loops that caused the installer to fail at Re-signing application.
+- Also re-signs nested SpliceKit bundles during patch/update and makes `xattr` clean-up non-fatal so harmless attribute clean-up issues do not abort the install.
+
+---
+
+### 3.3.3
+
+**🎉 Released:**
+- 23rd April 2026
+
+**🐞 Bug Fix:**
 - Fixes the patcher signing path for existing modded installs so nested SpliceKit bundles, framework, and app wrapper are re-signed correctly during rebuilds and updates.
 
 ---
