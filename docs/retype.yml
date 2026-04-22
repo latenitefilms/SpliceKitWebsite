@@ -20,7 +20,7 @@ links:
   icon: comment-discussion
   target: blank
 
-- text: Issues
+- text: Bugs & Feature Requests
   link: https://github.com/elliotttate/SpliceKit/issues
   icon: issue-opened
   target: blank
