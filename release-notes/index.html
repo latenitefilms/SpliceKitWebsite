@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.830215354624">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.830226285439">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.5.3.830215354624" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.5.3.830226285439" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.830215354624" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.830226285439" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.830215354624" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.830226285439" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -294,6 +294,52 @@
 <li><strong>Launch Final Cut Pro</strong> button improvements. Thanks for reporting Jonny!</li>
 <li>Help button now opens the website.</li>
 <li>Switched Sparkle from a vendored framework to Swift Package Manager for easier updating.</li>
+</ul>
+<hr>
+<h3 id="3210">3.2.10</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>21st April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
+<ul>
+<li>Smooth Scroll (Splices menu) now respects the Continuous Scrolling preference.</li>
+<li>The gate was reading a rate-derived property (<code translate="no" v-pre>keepsPlayheadCenteredDuringPlayback</code>) that is only true during fast-forward/rewind, so normal-rate playback was silently skipping the 120Hz centred takeover and feeling jerky.</li>
+<li>Swapped to <code translate="no" v-pre>scrollDuringPlayback</code> backed by <code translate="no" v-pre>FFScrollDuringPlaybackKey</code> — Continuous Scrolling ON engages our smooth centered path, OFF leaves FCP native edge-tracking intact with a smooth 120Hz overlay line on top.</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F41E;</span> Bug Fixes:</strong></p>
+<ul>
+<li>Fixes a first-install crash in the Overview bar where the renderer could hit a half-built collection synchronously; both entry points now defer via <code translate="no" v-pre>performSelector</code>.</li>
+</ul>
+<hr>
+<h3 id="329">3.2.9</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>21st April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
+<ul>
+<li>Smooth Scroll (on by default in Splices menu).</li>
+<li>120Hz centered-playback path replaces Final Cut Pro native 24/30Hz step scroll: clip view now slides continuously under a stationary playhead line on ProMotion displays instead of hopping sideways once per source frame.</li>
+<li>Implemented via <code translate="no" v-pre>CADisplayLink-driven clipView.setBoundsOrigin + reflectScrolledClipView</code>, with <code translate="no" v-pre>TLKScrollingTimeline</code> paused for the duration of playback so Apple step-centering does not fight the smooth path.</li>
+<li>Filmstrip and anchored-clip layer updates are also suspended during active pinch/marquee/scrollbar drag via <code translate="no" v-pre>TLKEventHandlerDid{Start,Stop}TrackingNotification</code> and a swizzle on <code translate="no" v-pre>TLKTimelineHandler.magnifyWithEvent</code> - removes the cell-rebuild hitch you used to see when zooming.</li>
+<li>Apple&#x27;s hidden <code translate="no" v-pre>TLKOptimizedReload</code> fast path is enabled via a getter swizzle.</li>
+<li>Fixes MCP bridge event-frame contamination (events are now opt-in; bridge client skips notifications), async <code translate="no" v-pre>command.completed</code> now reports <code translate="no" v-pre>status:error</code> for normal RPC failures, per-fd serial write queues keep RPC replies and events ordered without byte interleave, and the overview bar tears down its notification observers on uninstall.</li>
+<li>Toggle Smooth Scroll from <strong>Splices &gt; Smooth Scroll</strong> or via the <code translate="no" v-pre>timelinePerformanceMode</code> bridge option.</li>
+</ul>
+<hr>
+<h3 id="328">3.2.8</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>21st April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
+<ul>
+<li>Inline timeline overview bar sits below the ruler and shows a scaled-down view of the whole project, color-coded by lane.</li>
+<li>Click or double-click anywhere to jump the playhead; drag the visible-region rectangle&#x27;s body to pan the main timeline or its edges to zoom.</li>
+<li>Uses FCP&#x27;s own <code translate="no" v-pre>FFAnchoredCollectionImageCreation</code> renderer (the same one the Touch Bar overview uses) so lanes match FCP&#x27;s internal representation exactly.</li>
+<li>All redraws are event-driven — <code translate="no" v-pre>CADisplayLink</code> during playback (matches 60Hz / 120Hz ProMotion display refresh), <code translate="no" v-pre>TLKPlayheadViewFrameDidChangeNotification</code> for scrub or step, <code translate="no" v-pre>FFSequenceEditedNotification</code> for edits — zero CPU when idle.</li>
+<li>Toggle from <strong>Splices &gt; Overview</strong> menubar, or via the <code translate="no" v-pre>timelineOverviewBar</code> bridge option.</li>
 </ul>
 <hr>
 <h3 id="3207">3.2.07</h3>
