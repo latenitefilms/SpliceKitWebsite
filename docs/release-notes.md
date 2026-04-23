@@ -62,6 +62,51 @@
 
 ---
 
+### 3.2.10
+
+**🎉 Released:**
+- 21st April 2026
+
+**🔨 Improvements:**
+- Smooth Scroll (Splices menu) now respects the Continuous Scrolling preference.
+- The gate was reading a rate-derived property (`keepsPlayheadCenteredDuringPlayback`) that is only true during fast-forward/rewind, so normal-rate playback was silently skipping the 120Hz centred takeover and feeling jerky.
+- Swapped to `scrollDuringPlayback` backed by `FFScrollDuringPlaybackKey` — Continuous Scrolling ON engages our smooth centered path, OFF leaves FCP native edge-tracking intact with a smooth 120Hz overlay line on top.
+
+**🐞 Bug Fixes:**
+- Fixes a first-install crash in the Overview bar where the renderer could hit a half-built collection synchronously; both entry points now defer via `performSelector`.
+
+---
+
+### 3.2.9
+
+**🎉 Released:**
+- 21st April 2026
+
+**🔨 Improvements:**
+- Smooth Scroll (on by default in Splices menu).
+- 120Hz centered-playback path replaces Final Cut Pro native 24/30Hz step scroll: clip view now slides continuously under a stationary playhead line on ProMotion displays instead of hopping sideways once per source frame.
+- Implemented via `CADisplayLink-driven clipView.setBoundsOrigin + reflectScrolledClipView`, with `TLKScrollingTimeline` paused for the duration of playback so Apple step-centering does not fight the smooth path.
+- Filmstrip and anchored-clip layer updates are also suspended during active pinch/marquee/scrollbar drag via `TLKEventHandlerDid{Start,Stop}TrackingNotification` and a swizzle on `TLKTimelineHandler.magnifyWithEvent` - removes the cell-rebuild hitch you used to see when zooming.
+- Apple's hidden `TLKOptimizedReload` fast path is enabled via a getter swizzle.
+- Fixes MCP bridge event-frame contamination (events are now opt-in; bridge client skips notifications), async `command.completed` now reports `status:error` for normal RPC failures, per-fd serial write queues keep RPC replies and events ordered without byte interleave, and the overview bar tears down its notification observers on uninstall.
+- Toggle Smooth Scroll from **Splices > Smooth Scroll** or via the `timelinePerformanceMode` bridge option.
+
+---
+
+### 3.2.8
+
+**🎉 Released:**
+- 21st April 2026
+
+**🔨 Improvements:**
+- Inline timeline overview bar sits below the ruler and shows a scaled-down view of the whole project, color-coded by lane.
+- Click or double-click anywhere to jump the playhead; drag the visible-region rectangle's body to pan the main timeline or its edges to zoom.
+- Uses FCP's own `FFAnchoredCollectionImageCreation` renderer (the same one the Touch Bar overview uses) so lanes match FCP's internal representation exactly.
+- All redraws are event-driven — `CADisplayLink` during playback (matches 60Hz / 120Hz ProMotion display refresh), `TLKPlayheadViewFrameDidChangeNotification` for scrub or step, `FFSequenceEditedNotification` for edits — zero CPU when idle.
+- Toggle from **Splices > Overview** menubar, or via the `timelineOverviewBar` bridge option.
+
+---
+
 ### 3.2.07
 
 **🎉 Released:**
