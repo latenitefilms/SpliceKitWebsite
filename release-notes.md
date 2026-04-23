@@ -1,5 +1,18 @@
 # Release Notes
 
+### 3.3.5
+
+**🎉 Released:**
+- 24th April 2026
+
+**🔨 Improvements:**
+- Adds the Siri-style command palette with voice dictation.
+- Polished liquid-glass layout and single-selection handling.
+- Immersive Blackmagic RAW preview support.
+- Patcher diagnostics/Sentry runtime hardening.
+
+---
+
 ### 3.3.4
 
 **🎉 Released:**
