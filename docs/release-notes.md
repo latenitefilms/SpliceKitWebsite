@@ -1,5 +1,19 @@
 # Release Notes
 
+### 3.3.6
+
+**🎉 Released:**
+- 24th April 2026
+
+**🔨 Improvements:**
+- Adds Whisper large-v3 CoreML transcription for the social captions plugin (engine picker with Parakeet v3, Whisper large-v3-turbo, and Whisper large-v3; models download on first use).
+- Adds Sentry Logs support.
+
+**🐞 Bug Fixes:**
+- Fixes caption positions resetting to center on FCP relaunch by running the persisted-caption repair headlessly when the panel isn't open.
+
+---
+
 ### 3.3.5
 
 **🎉 Released:**
