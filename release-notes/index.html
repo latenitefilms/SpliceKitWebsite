@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.830317859323">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.5.3.830640809483">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.5.3">
@@ -38,11 +38,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../static/favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.5.3.830317859323" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.5.3.830640809483" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.830317859323" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.5.3.830640809483" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.5.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.830317859323" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.5.3.830640809483" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -233,6 +233,32 @@
 
                 <!-- Page content  -->
 <h1 id="release-notes">Release Notes</h1>
+<h3 id="338">3.3.8</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>28th April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F41E;</span> Bug Fixes:</strong></p>
+<ul>
+<li>Crash fixes from Sentry triage: silences false-positive &#x27;FCP terminated shortly after launch&#x27; Sentry events on normal user quits.</li>
+<li>Suppresses Xcode CLT prereq from crash dashboards.</li>
+<li>Ships <code translate="no" v-pre>whisper-transcriber</code> so the Whisper <code translate="no" v-pre>large-v3</code> / <code translate="no" v-pre>large-v3-turbo</code> engines in the social captions panel actually work.</li>
+<li>Hardens <code translate="no" v-pre>NSTask</code> termination handling in transcript/caption transcription paths.</li>
+<li>Fixes a playhead-overlay <code translate="no" v-pre>UAF</code> during timeline teardown.</li>
+<li>Rejects malformed <code translate="no" v-pre>RPC</code> params instead of crashing.</li>
+<li>Fixes a string-argument crash in <code translate="no" v-pre>system.callMethodWithArgs</code>.</li>
+</ul>
+<hr>
+<h3 id="337">3.3.7</h3>
+<p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
+<ul>
+<li>25th April 2026</li>
+</ul>
+<p><strong><span class="docs-emoji">&#x1F528;</span> Improvements:</strong></p>
+<ul>
+<li>Continues the Apple Immersive/BRAW work-in-progress with safer immersive preview decoding, reduced-resolution playback handling, fisheye/equirect preview improvements, native viewer state hardening, and crash fixes for affected users.</li>
+</ul>
+<hr>
 <h3 id="336">3.3.6</h3>
 <p><strong><span class="docs-emoji">&#x1F389;</span> Released:</strong></p>
 <ul>
