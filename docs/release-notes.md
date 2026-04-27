@@ -1,5 +1,31 @@
 # Release Notes
 
+### 3.3.8
+
+**🎉 Released:**
+- 28th April 2026
+
+**🐞 Bug Fixes:**
+- Crash fixes from Sentry triage: silences false-positive 'FCP terminated shortly after launch' Sentry events on normal user quits.
+- Suppresses Xcode CLT prereq from crash dashboards.
+- Ships `whisper-transcriber` so the Whisper `large-v3` / `large-v3-turbo` engines in the social captions panel actually work.
+- Hardens `NSTask` termination handling in transcript/caption transcription paths.
+- Fixes a playhead-overlay `UAF` during timeline teardown.
+- Rejects malformed `RPC` params instead of crashing.
+- Fixes a string-argument crash in `system.callMethodWithArgs`.
+
+---
+
+### 3.3.7
+
+**🎉 Released:**
+- 25th April 2026
+
+**🔨 Improvements:**
+- Continues the Apple Immersive/BRAW work-in-progress with safer immersive preview decoding, reduced-resolution playback handling, fisheye/equirect preview improvements, native viewer state hardening, and crash fixes for affected users.
+
+---
+
 ### 3.3.6
 
 **🎉 Released:**
