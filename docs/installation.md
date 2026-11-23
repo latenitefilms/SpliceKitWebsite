@@ -4,11 +4,9 @@ Make sure you have **Final Cut Pro v12** (lifetime/perpetual) and/or **Final Cut
 
 **Final Cut Pro v13** is also supported.
 
-Download the latest **SpliceKit** `DMG` from the [website](/download/).
+Download the latest **SpliceKit** `ZIP` from the [website](/download/).
 
-Open the `DMG` and drag **SpliceKit** into your **Applications** folder:
-
-![](/static/installation-01.png)
+Open the `ZIP` and drag **SpliceKit** into your **Applications** folder.
 
 Launch **SpliceKit** from your **Applications** folder.
 
