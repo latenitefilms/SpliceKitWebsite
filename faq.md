@@ -31,6 +31,16 @@ And because SpliceKit is a plugin framework, new features get added all the time
 
 ---
 
+## What's the FCP Cafe fork?
+
+Because the original creator [Brian Elliott Tate](https://www.instagram.com/elliotttate/) is flat out, and was struggling to review pull requests and push out updates we've forked the repo on FCP Cafe.
+
+Whilst we're too busy to add new features and functionality, we're happy to review what the community builds, and maintain the website and GitHub.
+
+The original SpliceKit repo can be found on [GitHub](https://github.com/elliotttate/SpliceKit).
+
+---
+
 ## How Does It Work?
 
 Here's the non-technical version:
@@ -111,11 +121,11 @@ The built-in plugins already handle the most common pain points. But if you ever
 
 ## Who created this?
 
-SpliceKit was created by Brian Elliott Tate.
+SpliceKit was created by [Brian Elliott Tate](https://www.instagram.com/elliotttate/).
 
 It originally started as a [MCP server for CommandPost](https://github.com/CommandPost/CommandPost/pull/3514), and then grew into SpliceKit.
 
-It's now maintained by Brian and [Chris Hocking from LateNite](https://fcp.cafe/latenite/#chris-hocking), with awesome [contributions](https://github.com/elliotttate/SpliceKit/graphs/contributors) from the Final Cut Pro community.
+This website is maintained [Chris Hocking from LateNite](https://fcp.cafe/latenite/#chris-hocking), with awesome [contributions](https://github.com/elliotttate/SpliceKit/graphs/contributors) from the Final Cut Pro community.
 
 Brian and Chris have been in touch since around 2017, when Brian was working on some FxPlug2 effects.
 
