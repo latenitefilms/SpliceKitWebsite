@@ -1,8 +1,10 @@
 # Installation
 
-Make sure you have **Final Cut Pro v12** (lifetime/perpetual) and/or **Final Cut Pro Creator Studio v12** (subscription) installed.
+Make sure you have **Final Cut Pro v12** (lifetime/perpetual) and/or **Final Cut Pro Creator Studio v12** (subscription) or later installed.
 
-Download the latest **SpliceKit** `DMG` from the [website](https://github.com/elliotttate/SpliceKit/releases/latest).
+**Final Cut Pro v13** is also supported.
+
+Download the latest **SpliceKit** `DMG` from the [website](/download/).
 
 Open the `DMG` and drag **SpliceKit** into your **Applications** folder:
 

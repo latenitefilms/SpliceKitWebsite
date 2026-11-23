@@ -161,19 +161,16 @@ One command, every clip on your timeline exports as its own file — all effects
 ---
 
 ### Native Codecs
-Drop Blackmagic RAW (`.braw`) and VP9/WebM files straight onto your timeline — no transcoding, no wrappers.
+Drop VP9/WebM files straight onto your timeline — no transcoding, no wrappers.
 
-!!!warning Blackmagic RAW requires BRAW Toolbox
-To enable Blackmagic RAW support in SpliceKit you need to have a legitimate paid version of LateNite's [BRAW Toolbox](https://brawtoolbox.fcp.cafe) installed.
-!!!
+SpliceKit ships a VP9 decoder that plug into Final Cut Pro through Apple's MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode.
 
-SpliceKit ships a BRAW RAW Processor and a VP9 decoder that plug into Final Cut Pro through Apple's MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode.
-
-A huge unlock for anyone cutting Blackmagic camera footage or pulling down WebM video from the web.
+A huge unlock for anyone pulling down WebM video from the web.
 
 ---
 
 ### Lots More!
+
 Dual Timelines, FlexMusic, Montage Maker, OpenTimelineIO exchange, Lua REPL, in-process debugger and more.
 
 Every one of them is code in [`Sources`](https://github.com/elliotttate/SpliceKit/tree/main/Sources) you can read, fork, or gut for parts.

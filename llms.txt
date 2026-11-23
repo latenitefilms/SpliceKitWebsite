@@ -3,23 +3,23 @@
 > Final Cut Pro, unlocked. A Command Palette, MCP server, and an open plugin framework to do almost anything.
 
 - [SpliceKit](https://splicekit.fcp.cafe/readme.md): SpliceKit
-- [Download](https://splicekit.fcp.cafe/download.md): You can download the latest SpliceKit on GitHub.
-- [System Requirements](https://splicekit.fcp.cafe/system-requirements.md): SpliceKit works with Final Cut Pro v12 (lifetime/perpetual) and Final Cut Pro Creator Studio v12 (subscription).
-- [Installation](https://splicekit.fcp.cafe/installation.md): Make sure you have Final Cut Pro v12 (lifetime/perpetual) and/or Final Cut Pro Creator Studio v12 (subscription) installed.
+- [Download](https://splicekit.fcp.cafe/download.md): SpliceKit v4 now requires at least ONE paid LateNite application installed from the Mac App Store. However, SpliceKit remains open source - and you can build it yourself.
+- [System Requirements](https://splicekit.fcp.cafe/system-requirements.md): SpliceKit works with Final Cut Pro v12 (lifetime/perpetual) and Final Cut Pro Creator Studio v12 (subscription) or later.
+- [Installation](https://splicekit.fcp.cafe/installation.md): Make sure you have Final Cut Pro v12 (lifetime/perpetual) and/or Final Cut Pro Creator Studio v12 (subscription) or later installed.
 - [Support](https://splicekit.fcp.cafe/support.md): The best place to get support is the FCP Cafe Discord.
 - [Frequently Asked Questions](https://splicekit.fcp.cafe/faq.md): SpliceKit lets you control Final Cut Pro with text commands and AI instead of clicking buttons and dragging things around.
 - [Troubleshooting](https://splicekit.fcp.cafe/troubleshooting.md): Apologies in advance if you have any trouble using SpliceKit.
 - [Contribute](https://splicekit.fcp.cafe/contribute.md): SpliceKit is open source and anyone can contribute to it.
 - [Release Notes](https://splicekit.fcp.cafe/release-notes.md): 🎉 Released:
 - [Uninstall](https://splicekit.fcp.cafe/uninstall.md): To uninstall SpliceKit, simply drag the application to the trash/bin.
-- [Credits](https://splicekit.fcp.cafe/credits.md): SpliceKit was created by Brian Elliott Tate.
-- [Privacy Policy](https://splicekit.fcp.cafe/privacy.md): Effective date: 23rd April 2026
+- [Credits](https://splicekit.fcp.cafe/credits.md): SpliceKit was created by the amazing Brian Elliott Tate.
+- [Privacy Policy](https://splicekit.fcp.cafe/privacy.md): Effective date: 23rd November 2026
 
 ## Features
 
 - [Audio Mixer](https://splicekit.fcp.cafe/features/audio-mixer.md): Mix by role, not clip-by-clip. Drop a compressor, EQ, or reverb on your Dialogue bus and every clip tagged Dialogue inherits it — past, present, and future.
 - [Command Palette](https://splicekit.fcp.cafe/features/command-palette.md): One keystroke to anything.
 - [MCP Server](https://splicekit.fcp.cafe/features/mcp-server.md): First, create a Python virtual environment for the MCP server and install the mcp package:
-- [Native BRAW and VP9 Support](https://splicekit.fcp.cafe/features/codec-support.md): To enable Blackmagic RAW support in SpliceKit you need to have a legitimate paid version of LateNite's BRAW Toolbox installed.
+- [Native VP9 Support](https://splicekit.fcp.cafe/features/codec-support.md): Drop VP9/WebM files straight onto your timeline — no transcoding, no wrappers, no third-party toolkit install.
 - [Sections](https://splicekit.fcp.cafe/features/sections.md): Sections bar for timeline song structure, add default transition to all clips command, fuzzy search stop-word handling.
 - [Transcript Editor](https://splicekit.fcp.cafe/features/transcript-editor.md): The Transcript Editor brings Text-Based Video Editing to Final Cut Pro:

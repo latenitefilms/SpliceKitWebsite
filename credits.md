@@ -1,8 +1,10 @@
 # Credits
 
-**SpliceKit** was created by [Brian Elliott Tate](https://www.instagram.com/elliotttate/).
+**SpliceKit** was created by the amazing [Brian Elliott Tate](https://www.instagram.com/elliotttate/).
 
 It's free and open-source and [lots of other people have contributed](https://github.com/elliotttate/SpliceKit/graphs/contributors).
+
+FCP Cafe has forked the original repo to release more frequent updates.
 
 The SpliceKit icon was designed by the amazing [Matthew Skiles](http://matthewskiles.com).
 

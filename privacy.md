@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective date:** 23rd April 2026
+**Effective date:** 23rd November 2026
 
 This Privacy Policy describes how **SpliceKit** (“the app”) handles information.
 
@@ -18,7 +18,7 @@ SpliceKit is designed to collect as little information as possible. The app does
 
 SpliceKit does **not** collect personal information such as your name, email address, postal address, or payment details through the app.
 
-However, SpliceKit uses **Sentry** to receive crash reports and diagnostic information when the app encounters an error or unexpected failure. This information may include technical data such as:
+However, some versions of SpliceKit uses **Sentry** to receive crash reports and diagnostic information when the app encounters an error or unexpected failure. This information may include technical data such as:
 
 - Crash Logs
 - Device Type
