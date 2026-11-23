@@ -1,10 +1,14 @@
 # SpliceKit
 
-**Final Cut Pro, unlocked. A Command Palette, MCP server, and an open plugin framework to do almost anything.**
+Final Cut Pro, unlocked.
+
+A Command Palette, MCP server, and an open plugin framework to do almost... anything. 🤯
 
 !!!success
-Free to [download](/download) and MIT Open Source!
+Free to [download](/download) and totally [open source](https://github.com/latenitefilms/SpliceKit)! 🥳
 !!!
+
+---
 
 ![](/static/banner-logo.png)
 
@@ -103,6 +107,7 @@ Every one of these is a plugin. They're bundled so you can use SpliceKit the day
 ---
 
 ### Text-Based Editor
+
 Transcribe every clip on your timeline with on-device speech recognition (NVIDIA Parakeet — 25 languages, no cloud, with speaker diarization). Click a word to jump there. Select a sentence, hit Delete, and the video gets cut to match. Drag words to reorder clips. Export as SRT or plain text.
 
 https://www.youtube.com/watch?v=JxxDSH4Ly0I
@@ -110,6 +115,7 @@ https://www.youtube.com/watch?v=JxxDSH4Ly0I
 ---
 
 ### Audio Mixer
+
 Mix by **role**, not clip-by-clip. Drop a compressor, EQ, or reverb on your Dialogue bus and every clip tagged Dialogue inherits it — past, present, and future. Retag a clip's role and it instantly picks up the new bus's processing. Set volumes, solo, and mute per role from one panel.
 
 https://www.youtube.com/watch?v=k_HL35lXFOA
@@ -117,6 +123,7 @@ https://www.youtube.com/watch?v=k_HL35lXFOA
 ---
 
 ### Sections
+
 A color-coded section bar above the timeline that shows the shape of your edit at a glance. Name sections, color them, jump between them in one click — perfect for long-form edits, podcasts, multi-chapter projects, or anywhere you want to see structure without scrubbing.
 
 https://www.youtube.com/watch?v=plirvqHe6o0
@@ -124,26 +131,31 @@ https://www.youtube.com/watch?v=plirvqHe6o0
 ---
 
 ### Silence Remover
+
 Point it at an interview or podcast recording and it finds and cuts every silent pause. Configurable threshold, minimum duration, and padding. Pure Apple-native AVFoundation + Accelerate under the hood.
 
 ---
 
 ### Social Media Captions
+
 Generate word-by-word highlighted, animated captions in 13 built-in styles (Bold Pop, Neon Glow, Karaoke, Typewriter, Bounce, and more). Captions land directly on your timeline as editable Motion titles.
 
 ---
 
 ### Scene Detection
+
 Finds every shot change in your footage using vImage histogram comparison. Add markers, blade the timeline, or both.
 
 ---
 
 ### Beat Detection & Song Cut
+
 Pulls BPM, beats, bars, and song sections from any music file. Hand **Song Cut** a music track and a folder of footage and get back a beat-synced music video on your timeline, with selectable pacing (natural, medium, fast, aggressive) or custom step weights.
 
 ---
 
 ### LiveCam
+
 A built-in webcam booth that records straight to your library or active timeline. Live preview with color adjustments, audio meter, and a subject-lift green-screen matte that works on people *and* objects (macOS 14+).
 
 Pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with a real alpha channel.
@@ -151,16 +163,19 @@ Pick "Transparent" as the green-screen color and LiveCam writes ProRes 4444 with
 ---
 
 ### URL Import
+
 Paste a YouTube, Vimeo, or Twitter link and pull it into your library as a real clip. Auto-discovers `yt-dlp` and `ffmpeg` from your shell PATH.
 
 ---
 
 ### Batch Export
+
 One command, every clip on your timeline exports as its own file — all effects, color grades, and transitions baked in.
 
 ---
 
 ### Native Codecs
+
 Drop VP9/WebM files straight onto your timeline — no transcoding, no wrappers.
 
 SpliceKit ships a VP9 decoder that plug into Final Cut Pro through Apple's MediaExtension framework, so the clips show up as first-class media with thumbnails, scrubbing, and full quality decode.
@@ -191,7 +206,7 @@ However, generally speaking, SpliceKit is actually **MORE** stable than Apple's 
 
 SpliceKit contains a bunch of amazing Final Cut Pro enhancements, allowing you to do things that was never possible before with [CommandPost](https://commandpost.fcp.cafe).
 
-Like [CommandPost](https://commandpost.fcp.cafe) though, it also has a **Lua-scripting environment**, so you can easily code your own Lua Scripts for powerful automation.
+Like [CommandPost v2](https://commandpost.fcp.cafe) though, it also has a **Lua-scripting environment**, so you can easily code your own Lua Scripts for powerful automation.
 
 Because SpliceKit has a MCP server, Claude Code, Codex, ChatGPT and other cloud and on-device LLMs have full control over Final Cut Pro.
 

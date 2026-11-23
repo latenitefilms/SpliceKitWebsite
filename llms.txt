@@ -1,6 +1,6 @@
 ﻿# SpliceKit
 
-> Final Cut Pro, unlocked. A Command Palette, MCP server, and an open plugin framework to do almost anything.
+> Final Cut Pro, unlocked.
 
 - [SpliceKit](https://splicekit.fcp.cafe/readme.md): SpliceKit
 - [Download](https://splicekit.fcp.cafe/download.md): SpliceKit v4 now requires at least ONE paid LateNite application installed from the Mac App Store. However, SpliceKit remains open source - and you can build it yourself.
