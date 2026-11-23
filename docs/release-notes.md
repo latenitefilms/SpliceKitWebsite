@@ -1,5 +1,23 @@
 # Release Notes
 
+### 3.3.9
+
+**🎉 Released:**
+- 30th August 2026
+
+**🔨 Improvements:**
+- LiveCam audio reliability and monitoring
+- Adds a responsive dBFS microphone meter with peak hold and clipping indication.
+- Adds optional Logitech MX Master 4 haptics through the included Logi Options+ plugin source.
+- Improves Smooth Scroll using FCP’s native playhead with safer state restoration.
+- Keeps long green-screen sessions bounded with pooled mask buffers and adaptive inference.
+
+**🐞 Bug Fixes:**
+- Fixes crackling with mono USB microphones such as the Shure MVX2U by preserving the native capture format.
+- Fixes meters that appeared but stayed frozen with variable Core Media buffer layouts.
+
+---
+
 ### 3.3.8
 
 **🎉 Released:**
