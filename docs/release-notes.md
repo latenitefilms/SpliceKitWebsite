@@ -1,5 +1,28 @@
 # Release Notes
 
+### 4.0.0 (Build 1)
+
+**🎉 Released:**
+- 24th November 2026
+
+**⚠️ Important Changes:**
+- This is now a **fork** of the official repo by [elliotttate](https://github.com/elliotttate), maintained by FCP Cafe.
+- Like CommandPost v2, you need to have a paid LateNite application installed to use this fork of SpliceKit.
+- The cheapest options are [ScriptStar](https://scriptstar.fcp.cafe), [Fast Collections](https://fastcollections.fcp.cafe), [Gyroflow Toolbox](https://gyroflowtoolbox.fcp.cafe), [LUT Robot](https://lutrobot.fcp.cafe), [News Import](https://newsimport.fcp.cafe), [Recall Toolbox](https://recalltoolbox.fcp.cafe) and [Transfer Toolbox](https://transfertoolbox.fcp.cafe) - all **USD$9.99**.
+- You can find a list of all LateNite's applications on the [Mac App Store](https://apps.apple.com/au/developer/latenite-films-pty-ltd/id1652018641).
+- Alternatively, you can download the latest code from GitHub and build yourself.
+
+**🔨 Improvements:**
+- **Final Cut Pro 13.0 and Creator Studio 13.0 support**. Clip copy and paste work with the updated pasteboard. SpliceKit keeps transitions when Final Cut Pro ripple-trims the clips to make room. Creator Studio launches with bundled MotionVFX content. Online MotionVFX downloads are unavailable in the patched copy.
+- **Safer transcript editing**. Delete Silences preserves stills, graphics and footage that could not be transcribed. Parakeet finishes a batch when one clip has unreadable audio. Final Cut Pro Native transcription works on Final Cut Pro 12.3 and 13, including edits drawn from different portions of the same source.
+- **Editing fixes**. Photos imports work again, the inspector stays populated after switching back to Final Cut Pro, and skimming with snapping enabled no longer crashes Intel Macs. Viewer, timeline and inspector screenshots now use ScreenCaptureKit.
+- **14 optional Editor Toolkit plug-ins**. Shubham Pratap’s toolkit adds RAW inspector controls, grade-layer locking, topmost-clip editing, waveform audio sync, flip controls, playback frame-rate monitoring and vertical-workspace improvements.
+- **Native Swift MCP server**. The app includes 189 editing tools, 10 resources and seven prompts. Set Up MCP for a Project… creates a client configuration. FCPXML and single-timeline OTIO JSON import work natively. Other interchange formats can use the optional external adapter, and Gemma connects to a separately started local server.
+- **A Swift-only public installation workflow**. The patcher handles installation, updates, rebuilds and removal. Switching from upstream v3.3.9 takes a one-time installation of the LateNite edition. The patcher checks locally for one of 15 eligible paid LateNite apps from the Mac App Store.
+- **BRAW and crash reporting have changed**. Use BRAW Toolbox for `.braw` footage. Updating removes SpliceKit’s old BRAW plug-ins. Sentry and Sparkle have been removed, and Share Logs gives you control over uploading diagnostics.
+
+---
+
 ### 3.3.9
 
 **🎉 Released:**
